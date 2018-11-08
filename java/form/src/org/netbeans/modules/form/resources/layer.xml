@@ -427,6 +427,7 @@
             </file>
             <file name="JApplet.form" url="templates/SwingForms/JApplet_form">
                 <attr name="template" boolvalue="true"/>
+                <attr name="javax.script.ScriptEngine" stringvalue="freemarker"/>
                 <attr name="templateCategory" stringvalue="java-forms"/>
                 <attr name="weight" intvalue="100"/>
             </file>
@@ -444,7 +445,8 @@
                 <attr name="weight" intvalue="100"/>
             </file>
             <file name="JDialog.form" url="templates/SwingForms/JDialog_form">
-                <attr name="template" boolvalue="true"/>                
+                <attr name="template" boolvalue="true"/>
+                <attr name="javax.script.ScriptEngine" stringvalue="freemarker"/>
                 <attr name="templateCategory" stringvalue="java-forms"/>
             </file>
 
@@ -462,6 +464,7 @@
             </file>
             <file name="JFrame.form" url="templates/SwingForms/JFrame_form">
                 <attr name="template" boolvalue="true"/>
+                <attr name="javax.script.ScriptEngine" stringvalue="freemarker"/>
                 <attr name="templateCategory" stringvalue="java-forms"/>
             </file>
 
@@ -479,6 +482,7 @@
             </file>
             <file name="JInternalFrame.form" url="templates/SwingForms/JInternalFrame_form">
                 <attr name="template" boolvalue="true"/>
+                <attr name="javax.script.ScriptEngine" stringvalue="freemarker"/>
                 <attr name="templateCategory" stringvalue="java-forms"/>
             </file>
 
@@ -496,6 +500,7 @@
             </file>
             <file name="JPanel.form" url="templates/SwingForms/JPanel_form">
                 <attr name="template" boolvalue="true"/>
+                <attr name="javax.script.ScriptEngine" stringvalue="freemarker"/>
                 <attr name="templateCategory" stringvalue="java-forms"/>
             </file>
 
@@ -513,6 +518,7 @@
             </file>
             <file name="BeanForm.form" url="templates/SwingForms/BeanForm_form">
                 <attr name="template" boolvalue="true"/>
+                <attr name="javax.script.ScriptEngine" stringvalue="freemarker"/>
                 <attr name="templateCategory" stringvalue="java-forms"/>
             </file>
             
@@ -530,6 +536,7 @@
             </file>
             <file name="Application.form" url="templates/Dialogs/Application_form">
                 <attr name="template" boolvalue="true"/>
+                <attr name="javax.script.ScriptEngine" stringvalue="freemarker"/>
                 <attr name="templateCategory" stringvalue="java-forms"/>
             </file>
 
@@ -547,6 +554,7 @@
             </file>
             <file name="MDIApplication.form" url="templates/Dialogs/MDIApplication_form">
                 <attr name="template" boolvalue="true"/>
+                <attr name="javax.script.ScriptEngine" stringvalue="freemarker"/>
                 <attr name="templateCategory" stringvalue="java-forms"/>
             </file>
 
@@ -564,6 +572,7 @@
             </file>
             <file name="OkCancelDialog.form" url="templates/Dialogs/OkCancelDialog_form">
                 <attr name="template" boolvalue="true"/>
+                <attr name="javax.script.ScriptEngine" stringvalue="freemarker"/>
                 <attr name="templateCategory" stringvalue="java-forms"/>
             </file>
             
@@ -591,6 +600,7 @@
             </file>
             <file name="Applet.form" url="templates/AWTForms/Applet_form">
                 <attr name="template" boolvalue="true"/>
+                <attr name="javax.script.ScriptEngine" stringvalue="freemarker"/>
                 <attr name="templateCategory" stringvalue="java-forms"/>
             </file>
 
@@ -608,6 +618,7 @@
             </file>
             <file name="Dialog.form" url="templates/AWTForms/Dialog_form">
                 <attr name="template" boolvalue="true"/>
+                <attr name="javax.script.ScriptEngine" stringvalue="freemarker"/>
                 <attr name="templateCategory" stringvalue="java-forms"/>
             </file>
 
@@ -625,6 +636,7 @@
             </file>
             <file name="Frame.form" url="templates/AWTForms/Frame_form">
                 <attr name="template" boolvalue="true"/>
+                <attr name="javax.script.ScriptEngine" stringvalue="freemarker"/>
                 <attr name="templateCategory" stringvalue="java-forms"/>
             </file>
 
@@ -641,6 +653,7 @@
             </file>
             <file name="Panel.form" url="templates/AWTForms/Panel_form">
                 <attr name="template" boolvalue="true"/>
+                <attr name="javax.script.ScriptEngine" stringvalue="freemarker"/>
                 <attr name="templateCategory" stringvalue="java-forms"/>
             </file>
         </folder>
