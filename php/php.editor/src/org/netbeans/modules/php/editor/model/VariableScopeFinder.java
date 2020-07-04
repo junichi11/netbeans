@@ -71,7 +71,17 @@ public final class VariableScopeFinder {
             }
         }
         VariableScopeWrapper subResult = subElements.isEmpty() ? VariableScopeWrapper.NONE : findWrapper(subElements, offset, scopeRangeAcceptor);
-        return subResult == VariableScopeWrapper.NONE ? retval : subResult;
+        if (subResult == VariableScopeWrapper.NONE) {
+            return retval;
+        }
+        // NETBEANS-4503
+        OffsetRange subResultRange = subResult.getBlockRange();
+        OffsetRange retvalRange = retval.getBlockRange();
+        if (subResultRange.containsInclusive(retvalRange.getStart())
+                && subResultRange.containsInclusive(retvalRange.getEnd())) {
+            return retval;
+        }
+        return subResult;
     }
 
     public VariableScope findNearestVarScope(Scope scope, int offset, VariableScope atOffset) {
