@@ -79,7 +79,9 @@ public abstract class SourceFactory {
             Parameters.notNull("mimeType", mimeType);   //NOI18N
             Parameters.notNull("context", context);   //NOI18N
             final Reference<Source> sourceRef = instances.get(file);
+            System.out.println("sourceRef: " + (sourceRef == null ? "null" : sourceRef.hashCode()));
             Source source = sourceRef == null ? null : sourceRef.get();
+            System.out.println("Source:: " + (source == null ? "null" : source.hashCode()));
             if (source == null || !mimeType.equals(source.getMimeType())) {
                 source = newSource(file, mimeType, context);
                 instances.put(file, new WeakReference<>(source));
@@ -97,6 +99,7 @@ public abstract class SourceFactory {
         @Override
         public Source removeSource(@NonNull final FileObject file) {
             Parameters.notNull("file", file);   //NOI18N
+            System.out.println("removeSource: " + file.getName());
             final Reference<Source> ref = instances.remove(file);
             return ref == null ? null : ref.get();
         }

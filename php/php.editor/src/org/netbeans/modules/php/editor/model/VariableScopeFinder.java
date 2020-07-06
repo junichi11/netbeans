@@ -22,6 +22,8 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicBoolean;
+import org.netbeans.api.annotations.common.NullAllowed;
 import org.netbeans.modules.csl.api.OffsetRange;
 import org.netbeans.modules.php.editor.model.impl.LazyBuild;
 import org.openide.filesystems.FileObject;
@@ -41,37 +43,64 @@ public final class VariableScopeFinder {
 
     public VariableScope find(final Scope scope, final int offset, final ScopeRangeAcceptor scopeRangeAcceptor) {
         assert scope != null;
-        return find(scope.getElements(), offset, scopeRangeAcceptor);
+        VariableScope variableScope = find(scope.getElements(), offset, scopeRangeAcceptor);
+        return variableScope;
     }
 
     public VariableScope find(final List<? extends ModelElement> elements, final int offset, final ScopeRangeAcceptor scopeRangeAcceptor) {
-        return findWrapper(elements, offset, scopeRangeAcceptor).getVariableScope();
+        AtomicBoolean lazyScanned = new AtomicBoolean(false);
+        VariableScope variableScope = findWrapper(elements, offset, scopeRangeAcceptor, lazyScanned).getVariableScope();
+        if (lazyScanned.get()) {
+            System.out.println("findWrapper Again");
+            lazyScanned.set(false);
+            variableScope = findWrapper(elements, offset, scopeRangeAcceptor, lazyScanned).getVariableScope();
+        }
+        System.out.println("variableScope: " + (variableScope == null ? "null" : variableScope.getName()));
+        return variableScope;
     }
 
-    private VariableScopeWrapper findWrapper(final List<? extends ModelElement> elements, final int offset, final ScopeRangeAcceptor scopeRangeAcceptor) {
+    private VariableScopeWrapper findWrapper(final List<? extends ModelElement> elements, final int offset, final ScopeRangeAcceptor scopeRangeAcceptor, final AtomicBoolean lazyScanned) {
         assert elements != null;
         assert scopeRangeAcceptor != null;
         VariableScopeWrapper retval = VariableScopeWrapper.NONE;
         List<ModelElement> subElements = new LinkedList<>();
+        System.out.println("elements:" + elements.size());
         for (ModelElement modelElement : elements) {
             if (modelElement instanceof VariableScope) {
                 VariableScope varScope = (VariableScope) modelElement;
                 VariableScopeWrapper varScopeWrapper = new VariableScopeWrapperImpl(varScope, scopeRangeAcceptor);
+                OffsetRange range = varScopeWrapper.getBlockRange();
+                OffsetRange retvalRange = retval.getBlockRange();
                 if (scopeRangeAcceptor.accept(varScopeWrapper, offset) && scopeRangeAcceptor.overlaps(retval, varScopeWrapper)) {
                     // #268825
                     if (modelElement instanceof LazyBuild) {
                         LazyBuild scope = (LazyBuild) modelElement;
                         if (!scope.isScanned()) {
+                            System.out.println("LazyBuild: " + scope.toString());
                             scope.scan();
+                            if (lazyScanned != null) {
+                                lazyScanned.set(true);
+                            }
                         }
                     }
-                    retval = varScopeWrapper;
+                    if (retval == VariableScopeWrapper.NONE || (range != null && retvalRange != null
+                            && retvalRange.containsInclusive(range.getStart()) && retvalRange.containsInclusive(range.getEnd()))) {
+                        retval = varScopeWrapper;
+                    }
                     subElements.addAll(varScopeWrapper.getElements());
                 }
             }
         }
-        VariableScopeWrapper subResult = subElements.isEmpty() ? VariableScopeWrapper.NONE : findWrapper(subElements, offset, scopeRangeAcceptor);
+        System.out.println("retval: " + (retval.getVariableScope() == null ? "null" : retval.getVariableScope().getName()));
+        System.out.println("subElements: ----");
+        for (ModelElement subElement : subElements) {
+            System.out.println("    " + subElement.getName());
+        }
+        VariableScopeWrapper subResult = subElements.isEmpty() ? VariableScopeWrapper.NONE : findWrapper(subElements, offset, scopeRangeAcceptor, lazyScanned);
+        System.out.println("retval: " + (retval.getVariableScope() == null ? "null" : retval.getVariableScope().getName())
+                + ", subResult: " + (subResult.getVariableScope() == null ? "null" : subResult.getVariableScope().getName()));
         if (subResult == VariableScopeWrapper.NONE) {
+            System.out.println("return " + (retval.getVariableScope() == null ? "null" : retval.getVariableScope().getName()));
             return retval;
         }
         // NETBEANS-4503
@@ -79,8 +108,10 @@ public final class VariableScopeFinder {
         OffsetRange retvalRange = retval.getBlockRange();
         if (subResultRange.containsInclusive(retvalRange.getStart())
                 && subResultRange.containsInclusive(retvalRange.getEnd())) {
+            System.out.println("return2 " + (retval.getVariableScope() == null ? "null" : retval.getVariableScope().getName()));
             return retval;
         }
+        System.out.println("return3 " + (subResult.getVariableScope() == null ? "null" : subResult.getVariableScope().getName()));
         return subResult;
     }
 

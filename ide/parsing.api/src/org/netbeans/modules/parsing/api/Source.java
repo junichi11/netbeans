@@ -204,6 +204,7 @@ public final class Source implements Lookup.Provider {
                 + document.getClass() + "@" + Integer.toHexString(System.identityHashCode(document))); //NOI18N
         }
 
+        System.out.println("Document: " + document.hashCode());
         synchronized (Source.class) {
             @SuppressWarnings("unchecked") //NOI18N
             Reference<Source> sourceRef = (Reference<Source>) document.getProperty(Source.class);
@@ -535,6 +536,7 @@ public final class Source implements Lookup.Provider {
             @NonNull final String mimeType,
             @NonNull final FileObject fileObject, 
             @NonNull final Lookup context) {
+        System.out.println("FileObject: " + fileObject.hashCode());
         synchronized (Source.class) {
             final Source source = SourceFactory.getDefault().createSource(fileObject, mimeType, context);
             assert source.context == context;

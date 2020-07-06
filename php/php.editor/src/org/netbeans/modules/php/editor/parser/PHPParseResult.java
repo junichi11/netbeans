@@ -76,6 +76,7 @@ public class PHPParseResult extends ParserResult {
 
     public synchronized Model getModel(Type type) {
         if (model == null) {
+            System.out.println("PHPParseResult:ModelFactory.getModel");
             model = ModelFactory.getModel(this);
         }
         type.process(model);

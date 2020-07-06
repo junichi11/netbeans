@@ -124,6 +124,7 @@ public final class ParserManager {
         }
 
         public Void run () throws Exception {
+            System.out.println("Source: " + source.hashCode());
             SourceCache sourceCache = SourceAccessor.getINSTANCE ().getCache (source);
             final ResultIterator resultIterator = new ResultIterator (sourceCache, userTask);
             try {
@@ -435,7 +436,3 @@ public final class ParserManager {
     //where
     private static Map<String,Reference<Parser>> cachedParsers = new HashMap<String,Reference<Parser>>();    
 }
-
-
-
-

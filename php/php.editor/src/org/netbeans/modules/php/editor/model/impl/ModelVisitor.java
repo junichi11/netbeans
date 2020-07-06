@@ -545,6 +545,8 @@ public final class ModelVisitor extends DefaultTreePathVisitor {
         }
         try {
             if (!lazyScan) {
+                System.out.println("!lazyScan");
+                System.out.println("node: " + node);
                 lazyScan = true; // scan only one exact method...no nested methods (even though that they shouldn't exist)
                 scan(node.getFunction().getFormalParameters());
                 scan(node.getFunction().getBody());
@@ -1199,6 +1201,7 @@ public final class ModelVisitor extends DefaultTreePathVisitor {
             scope = scope.getInScope();
         }
         FunctionScopeImpl fncScope = ((NamespaceScopeImpl) scope).createElement(modelBuilder.getProgram(), node);
+        System.out.println("FunctionDeclaration: " + fncScope);
         modelBuilder.setCurrentScope(fncScope);
         occurencesBuilder.prepare(node, fncScope);
         markerBuilder.prepare(node, fncScope);

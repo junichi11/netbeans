@@ -19,6 +19,8 @@
 package org.netbeans.modules.php.editor.model.impl;
 
 import java.util.Collection;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.netbeans.modules.parsing.spi.indexing.support.IndexDocument;
 import org.netbeans.modules.php.editor.api.PhpElementKind;
 import org.netbeans.modules.php.editor.api.PhpModifiers;
@@ -111,11 +113,15 @@ final class NamespaceScopeImpl extends ScopeImpl implements NamespaceScope, Vari
                 PhpElementKind.NAMESPACE_DECLARATION,
                 inScope.isDeprecated());
         isDefault = true;
+        for (StackTraceElement e : Thread.currentThread().getStackTrace()) {
+            System.out.println(e);
+        }
     }
 
     @Override
     void addElement(ModelElementImpl element) {
         super.addElement(element);
+        System.out.println("addElement: " + element.getName());
     }
 
     @Override
