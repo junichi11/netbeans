@@ -100,6 +100,7 @@ public class ConstantDeclaration extends BodyDeclaration {
 
     @Override
     public String toString() {
+        // TODO attributed
         StringBuilder sb = new StringBuilder();
         for (Expression expression : getInitializers()) {
             sb.append(expression).append(","); //NOI18N

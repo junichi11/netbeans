@@ -105,6 +105,7 @@ public class FieldsDeclaration extends BodyDeclaration {
 
     @Override
     public String toString() {
+        // TODO attributes
         StringBuilder sb = new StringBuilder();
         for (SingleFieldDeclaration singleFieldDeclaration : getFields()) {
             sb.append(singleFieldDeclaration).append(" "); //NOI18N

@@ -1,0 +1,660 @@
+token #0 PHP_OPENTAG <?php
+token #1 WHITESPACE \n
+token #2 PHP_COMMENT_START /*
+token #3 PHP_COMMENT \n * Licensed to the Apache Software Foundation (ASF) under one\n * or more contributor license agreements.  See the NOTICE file\n * distributed with this work for additional information\n * regarding copyright ownership.  The ASF licenses this file\n * to you under the Apache License, Version 2.0 (the\n * "License"); you may not use this file except in compliance\n * with the License.  You may obtain a copy of the License at\n *\n *   http://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing,\n * software distributed under the License is distributed on an\n * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\n * KIND, either express or implied.  See the License for the\n * specific language governing permissions and limitations\n * under the License.\n 
+token #4 PHP_COMMENT_END */
+token #5 WHITESPACE \n\n
+token #6 PHP_ATTRIBUTE #[
+token #7 PHP_STRING Class1
+token #8 PHP_TOKEN (
+token #9 PHP_NUMBER 1
+token #10 PHP_TOKEN )
+token #11 PHP_TOKEN ]
+token #12 WHITESPACE \n
+token #13 PHP_CLASS class
+token #14 WHITESPACE  
+token #15 PHP_STRING AttributeSyntax
+token #16 WHITESPACE \n
+token #17 PHP_CURLY_OPEN {
+token #18 WHITESPACE \n    
+token #19 PHP_ATTRIBUTE #[
+token #20 PHP_STRING Class1
+token #21 PHP_TOKEN (
+token #22 PHP_NUMBER 2
+token #23 PHP_TOKEN )
+token #24 PHP_TOKEN ]
+token #25 WHITESPACE \n    
+token #26 PHP_ATTRIBUTE #[
+token #27 PHP_STRING Class2
+token #28 PHP_TOKEN (
+token #29 PHP_NUMBER 2
+token #30 PHP_TOKEN )
+token #31 PHP_TOKEN ]
+token #32 WHITESPACE \n    
+token #33 PHP_PUBLIC public
+token #34 WHITESPACE  
+token #35 PHP_CONST const
+token #36 WHITESPACE  
+token #37 PHP_STRING CONSTANT
+token #38 WHITESPACE  
+token #39 PHP_OPERATOR =
+token #40 WHITESPACE  
+token #41 PHP_CONSTANT_ENCAPSED_STRING 'constant'
+token #42 PHP_SEMICOLON ;
+token #43 WHITESPACE \n\n    
+token #44 PHP_ATTRIBUTE #[
+token #45 PHP_STRING Class1
+token #46 PHP_TOKEN (
+token #47 PHP_NUMBER 3
+token #48 PHP_TOKEN )
+token #49 PHP_TOKEN ]
+token #50 WHITESPACE \n    
+token #51 PHP_PUBLIC public
+token #52 WHITESPACE  
+token #53 PHP_VARIABLE $field
+token #54 PHP_SEMICOLON ;
+token #55 WHITESPACE \n\n    
+token #56 PHP_ATTRIBUTE #[
+token #57 PHP_STRING Class1
+token #58 PHP_TOKEN (
+token #59 PHP_NUMBER 4
+token #60 PHP_TOKEN )
+token #61 PHP_TOKEN ,
+token #62 WHITESPACE  
+token #63 PHP_STRING Class2
+token #64 PHP_TOKEN (
+token #65 PHP_NUMBER 4
+token #66 PHP_TOKEN )
+token #67 PHP_TOKEN ]
+token #68 WHITESPACE  
+token #69 PHP_LINE_COMMENT //
+token #70 PHP_LINE_COMMENT  group\n
+token #71 WHITESPACE     
+token #72 PHP_PUBLIC public
+token #73 WHITESPACE  
+token #74 PHP_VARIABLE $staticField
+token #75 PHP_SEMICOLON ;
+token #76 WHITESPACE \n\n    
+token #77 PHP_ATTRIBUTE #[
+token #78 PHP_STRING Class1
+token #79 PHP_TOKEN (
+token #80 PHP_NUMBER 5
+token #81 PHP_TOKEN )
+token #82 PHP_TOKEN ]
+token #83 WHITESPACE \n    
+token #84 PHP_PUBLIC public
+token #85 WHITESPACE  
+token #86 PHP_FUNCTION function
+token #87 WHITESPACE  
+token #88 PHP_STRING method
+token #89 PHP_TOKEN (
+token #90 PHP_ATTRIBUTE #[
+token #91 PHP_STRING Class1
+token #92 PHP_TOKEN (
+token #93 PHP_NUMBER 6
+token #94 PHP_TOKEN )
+token #95 PHP_TOKEN ]
+token #96 WHITESPACE  
+token #97 PHP_VARIABLE $param1
+token #98 PHP_TOKEN ,
+token #99 WHITESPACE  
+token #100 PHP_ATTRIBUTE #[
+token #101 PHP_STRING Class1
+token #102 PHP_TOKEN (
+token #103 PHP_CONSTANT_ENCAPSED_STRING 'foo'
+token #104 PHP_TOKEN ,
+token #105 WHITESPACE  
+token #106 PHP_CONSTANT_ENCAPSED_STRING 'bar'
+token #107 PHP_TOKEN ,
+token #108 WHITESPACE  
+token #109 PHP_NUMBER 7
+token #110 PHP_TOKEN )
+token #111 PHP_TOKEN ]
+token #112 WHITESPACE  
+token #113 PHP_TYPE_INT int
+token #114 WHITESPACE  
+token #115 PHP_VARIABLE $pram2
+token #116 PHP_TOKEN )
+token #117 WHITESPACE  
+token #118 PHP_CURLY_OPEN {
+token #119 PHP_CURLY_CLOSE }
+token #120 WHITESPACE \n\n    
+token #121 PHP_ATTRIBUTE #[
+token #122 PHP_STRING Class1
+token #123 PHP_TOKEN (
+token #124 PHP_NUMBER 8
+token #125 PHP_TOKEN )
+token #126 PHP_TOKEN ]
+token #127 WHITESPACE \n    
+token #128 PHP_PUBLIC public
+token #129 WHITESPACE  
+token #130 PHP_STATIC static
+token #131 WHITESPACE  
+token #132 PHP_FUNCTION function
+token #133 WHITESPACE  
+token #134 PHP_STRING staticMethod
+token #135 PHP_TOKEN (
+token #136 PHP_ATTRIBUTE #[
+token #137 PHP_STRING Class1
+token #138 PHP_NS_SEPARATOR \
+token #139 PHP_STRING Test
+token #140 PHP_TOKEN (
+token #141 PHP_NUMBER 9
+token #142 PHP_TOKEN )
+token #143 PHP_TOKEN ]
+token #144 WHITESPACE  
+token #145 PHP_TYPE_INT int
+token #146 PHP_OPERATOR |
+token #147 PHP_TYPE_STRING string
+token #148 WHITESPACE  
+token #149 PHP_VARIABLE $param1
+token #150 PHP_TOKEN )
+token #151 PHP_TOKEN :
+token #152 WHITESPACE  
+token #153 PHP_TYPE_BOOL bool
+token #154 PHP_OPERATOR |
+token #155 PHP_TYPE_INT int
+token #156 WHITESPACE  
+token #157 PHP_CURLY_OPEN {
+token #158 WHITESPACE \n        
+token #159 PHP_RETURN return
+token #160 WHITESPACE  
+token #161 PHP_FALSE false
+token #162 PHP_SEMICOLON ;
+token #163 WHITESPACE \n    
+token #164 PHP_CURLY_CLOSE }
+token #165 WHITESPACE \n
+token #166 PHP_CURLY_CLOSE }
+token #167 WHITESPACE \n\n
+token #168 PHP_ATTRIBUTE #[
+token #169 PHP_STRING ChildClass1
+token #170 PHP_TOKEN (
+token #171 PHP_NUMBER 1
+token #172 PHP_TOKEN )
+token #173 PHP_TOKEN ]
+token #174 WHITESPACE \n
+token #175 PHP_CLASS class
+token #176 WHITESPACE  
+token #177 PHP_STRING AttributeSyntaxChild
+token #178 WHITESPACE  
+token #179 PHP_EXTENDS extends
+token #180 WHITESPACE  
+token #181 PHP_STRING AttributeSyntax
+token #182 WHITESPACE  
+token #183 PHP_CURLY_OPEN {
+token #184 WHITESPACE \n
+token #185 PHP_CURLY_CLOSE }
+token #186 WHITESPACE \n\n
+token #187 PHP_ATTRIBUTE #[
+token #188 PHP_STRING Trait1
+token #189 PHP_TOKEN (
+token #190 PHP_NUMBER 1
+token #191 PHP_TOKEN )
+token #192 PHP_TOKEN ]
+token #193 WHITESPACE \n
+token #194 PHP_ATTRIBUTE #[
+token #195 PHP_STRING Trait2
+token #196 PHP_TOKEN (
+token #197 PHP_NUMBER 1
+token #198 PHP_TOKEN )
+token #199 PHP_TOKEN ]
+token #200 WHITESPACE \n
+token #201 PHP_TRAIT trait
+token #202 WHITESPACE  
+token #203 PHP_STRING TestTrait
+token #204 WHITESPACE \n
+token #205 PHP_CURLY_OPEN {
+token #206 WHITESPACE \n    
+token #207 PHP_ATTRIBUTE #[
+token #208 PHP_STRING Trait1
+token #209 PHP_TOKEN (
+token #210 PHP_NUMBER 2
+token #211 PHP_TOKEN )
+token #212 PHP_TOKEN ]
+token #213 WHITESPACE \n    
+token #214 PHP_PUBLIC public
+token #215 WHITESPACE  
+token #216 PHP_VARIABLE $field
+token #217 PHP_SEMICOLON ;
+token #218 WHITESPACE \n\n    
+token #219 PHP_ATTRIBUTE #[
+token #220 PHP_STRING Trait1
+token #221 PHP_TOKEN (
+token #222 PHP_NUMBER 3
+token #223 PHP_TOKEN )
+token #224 PHP_TOKEN ]
+token #225 WHITESPACE \n    
+token #226 PHP_PUBLIC public
+token #227 WHITESPACE  
+token #228 PHP_VARIABLE $staticField
+token #229 PHP_SEMICOLON ;
+token #230 WHITESPACE \n\n    
+token #231 PHP_ATTRIBUTE #[
+token #232 PHP_STRING Trait1
+token #233 PHP_TOKEN (
+token #234 PHP_NUMBER 4
+token #235 PHP_TOKEN )
+token #236 PHP_TOKEN ]
+token #237 WHITESPACE \n    
+token #238 PHP_PUBLIC public
+token #239 WHITESPACE  
+token #240 PHP_FUNCTION function
+token #241 WHITESPACE  
+token #242 PHP_STRING method
+token #243 PHP_TOKEN (
+token #244 PHP_ATTRIBUTE #[
+token #245 PHP_STRING Trait1
+token #246 PHP_TOKEN (
+token #247 PHP_NUMBER 5
+token #248 PHP_TOKEN )
+token #249 PHP_TOKEN ]
+token #250 WHITESPACE  
+token #251 PHP_VARIABLE $param1
+token #252 PHP_TOKEN )
+token #253 WHITESPACE  
+token #254 PHP_CURLY_OPEN {
+token #255 PHP_CURLY_CLOSE }
+token #256 WHITESPACE \n\n    
+token #257 PHP_ATTRIBUTE #[
+token #258 PHP_STRING Trait1
+token #259 PHP_TOKEN (
+token #260 PHP_NUMBER 6
+token #261 PHP_TOKEN )
+token #262 PHP_TOKEN ]
+token #263 WHITESPACE \n    
+token #264 PHP_ATTRIBUTE #[
+token #265 PHP_STRING Trait2
+token #266 PHP_TOKEN (
+token #267 PHP_NUMBER 6
+token #268 PHP_TOKEN )
+token #269 PHP_TOKEN ]
+token #270 WHITESPACE \n    
+token #271 PHP_PUBLIC public
+token #272 WHITESPACE  
+token #273 PHP_STATIC static
+token #274 WHITESPACE  
+token #275 PHP_FUNCTION function
+token #276 WHITESPACE  
+token #277 PHP_STRING staticMethod
+token #278 PHP_TOKEN (
+token #279 PHP_ATTRIBUTE #[
+token #280 PHP_STRING Trait1
+token #281 PHP_TOKEN ]
+token #282 WHITESPACE  
+token #283 PHP_TYPE_INT int
+token #284 PHP_OPERATOR |
+token #285 PHP_TYPE_STRING string
+token #286 WHITESPACE  
+token #287 PHP_VARIABLE $param1
+token #288 PHP_TOKEN )
+token #289 PHP_TOKEN :
+token #290 WHITESPACE  
+token #291 PHP_TYPE_BOOL bool
+token #292 PHP_OPERATOR |
+token #293 PHP_TYPE_INT int
+token #294 WHITESPACE  
+token #295 PHP_CURLY_OPEN {
+token #296 WHITESPACE \n        
+token #297 PHP_RETURN return
+token #298 WHITESPACE  
+token #299 PHP_FALSE false
+token #300 PHP_SEMICOLON ;
+token #301 WHITESPACE \n    
+token #302 PHP_CURLY_CLOSE }
+token #303 WHITESPACE \n
+token #304 PHP_CURLY_CLOSE }
+token #305 WHITESPACE \n\n
+token #306 PHP_VARIABLE $anon
+token #307 WHITESPACE  
+token #308 PHP_OPERATOR =
+token #309 WHITESPACE  
+token #310 PHP_NEW new
+token #311 WHITESPACE  
+token #312 PHP_ATTRIBUTE #[
+token #313 PHP_STRING Anon1
+token #314 PHP_TOKEN (
+token #315 PHP_NUMBER 1
+token #316 PHP_TOKEN )
+token #317 PHP_TOKEN ]
+token #318 WHITESPACE  
+token #319 PHP_CLASS class
+token #320 WHITESPACE  
+token #321 PHP_TOKEN (
+token #322 PHP_TOKEN )
+token #323 WHITESPACE  
+token #324 PHP_CURLY_OPEN {
+token #325 PHP_CURLY_CLOSE }
+token #326 PHP_SEMICOLON ;
+token #327 WHITESPACE \n\n
+token #328 PHP_VARIABLE $anon2
+token #329 WHITESPACE  
+token #330 PHP_OPERATOR =
+token #331 WHITESPACE  
+token #332 PHP_NEW new
+token #333 WHITESPACE  
+token #334 PHP_ATTRIBUTE #[
+token #335 PHP_STRING Anon2
+token #336 PHP_TOKEN (
+token #337 PHP_NUMBER 1
+token #338 PHP_TOKEN )
+token #339 PHP_TOKEN ]
+token #340 WHITESPACE  
+token #341 PHP_CLASS class
+token #342 WHITESPACE  
+token #343 PHP_TOKEN (
+token #344 PHP_VARIABLE $test
+token #345 PHP_TOKEN )
+token #346 WHITESPACE  
+token #347 PHP_CURLY_OPEN {
+token #348 WHITESPACE \n    
+token #349 PHP_ATTRIBUTE #[
+token #350 PHP_STRING Anon2
+token #351 PHP_TOKEN (
+token #352 PHP_NUMBER 2
+token #353 PHP_TOKEN )
+token #354 PHP_TOKEN ]
+token #355 WHITESPACE \n    
+token #356 PHP_PUBLIC public
+token #357 WHITESPACE  
+token #358 PHP_CONST const
+token #359 WHITESPACE  
+token #360 PHP_STRING CONSTANT
+token #361 WHITESPACE  
+token #362 PHP_OPERATOR =
+token #363 WHITESPACE  
+token #364 PHP_CONSTANT_ENCAPSED_STRING 'constant'
+token #365 PHP_SEMICOLON ;
+token #366 WHITESPACE \n\n    
+token #367 PHP_ATTRIBUTE #[
+token #368 PHP_STRING Anon2
+token #369 PHP_TOKEN (
+token #370 PHP_NUMBER 3
+token #371 PHP_TOKEN )
+token #372 PHP_TOKEN ]
+token #373 WHITESPACE \n    
+token #374 PHP_PUBLIC public
+token #375 WHITESPACE  
+token #376 PHP_TYPE_STRING string
+token #377 WHITESPACE  
+token #378 PHP_VARIABLE $field
+token #379 WHITESPACE  
+token #380 PHP_OPERATOR =
+token #381 WHITESPACE  
+token #382 PHP_CONSTANT_ENCAPSED_STRING 'test'
+token #383 PHP_SEMICOLON ;
+token #384 WHITESPACE \n\n    
+token #385 PHP_ATTRIBUTE #[
+token #386 PHP_STRING Anon2
+token #387 PHP_TOKEN (
+token #388 PHP_NUMBER 4
+token #389 PHP_TOKEN )
+token #390 PHP_TOKEN ]
+token #391 WHITESPACE \n    
+token #392 PHP_PUBLIC public
+token #393 WHITESPACE  
+token #394 PHP_STATIC static
+token #395 WHITESPACE  
+token #396 PHP_TYPE_INT int
+token #397 WHITESPACE  
+token #398 PHP_VARIABLE $staticField
+token #399 WHITESPACE  
+token #400 PHP_OPERATOR =
+token #401 WHITESPACE  
+token #402 PHP_NUMBER 1
+token #403 PHP_SEMICOLON ;
+token #404 WHITESPACE \n\n    
+token #405 PHP_ATTRIBUTE #[
+token #406 PHP_STRING Anon2
+token #407 PHP_TOKEN (
+token #408 PHP_NUMBER 5
+token #409 PHP_TOKEN )
+token #410 PHP_TOKEN ]
+token #411 WHITESPACE \n    
+token #412 PHP_PUBLIC public
+token #413 WHITESPACE  
+token #414 PHP_FUNCTION function
+token #415 WHITESPACE  
+token #416 PHP_STRING __construct
+token #417 PHP_TOKEN (
+token #418 PHP_ATTRIBUTE #[
+token #419 PHP_STRING Anon2
+token #420 PHP_TOKEN (
+token #421 PHP_NUMBER 6
+token #422 PHP_TOKEN )
+token #423 PHP_TOKEN ]
+token #424 WHITESPACE  
+token #425 PHP_VARIABLE $param1
+token #426 PHP_TOKEN )
+token #427 WHITESPACE  
+token #428 PHP_CURLY_OPEN {
+token #429 WHITESPACE \n    
+token #430 PHP_CURLY_CLOSE }
+token #431 WHITESPACE \n\n    
+token #432 PHP_ATTRIBUTE #[
+token #433 PHP_STRING Anon2
+token #434 PHP_TOKEN (
+token #435 PHP_NUMBER 7
+token #436 PHP_TOKEN )
+token #437 PHP_TOKEN ]
+token #438 WHITESPACE \n    
+token #439 PHP_PUBLIC public
+token #440 WHITESPACE  
+token #441 PHP_FUNCTION function
+token #442 WHITESPACE  
+token #443 PHP_STRING method
+token #444 PHP_TOKEN (
+token #445 PHP_ATTRIBUTE #[
+token #446 PHP_STRING Anon2
+token #447 PHP_TOKEN (
+token #448 PHP_NUMBER 8
+token #449 PHP_TOKEN )
+token #450 PHP_TOKEN ]
+token #451 WHITESPACE  
+token #452 PHP_VARIABLE $param1
+token #453 PHP_TOKEN )
+token #454 PHP_TOKEN :
+token #455 WHITESPACE  
+token #456 PHP_TYPE_INT int
+token #457 PHP_OPERATOR |
+token #458 PHP_TYPE_STRING string
+token #459 WHITESPACE  
+token #460 PHP_CURLY_OPEN {
+token #461 WHITESPACE \n        
+token #462 PHP_RETURN return
+token #463 WHITESPACE  
+token #464 PHP_NUMBER 1
+token #465 PHP_SEMICOLON ;
+token #466 WHITESPACE \n    
+token #467 PHP_CURLY_CLOSE }
+token #468 WHITESPACE \n\n    
+token #469 PHP_ATTRIBUTE #[
+token #470 PHP_STRING Anon2
+token #471 PHP_TOKEN ]
+token #472 WHITESPACE \n    
+token #473 PHP_PRIVATE private
+token #474 WHITESPACE  
+token #475 PHP_STATIC static
+token #476 WHITESPACE  
+token #477 PHP_FUNCTION function
+token #478 WHITESPACE  
+token #479 PHP_STRING staticMethod
+token #480 PHP_TOKEN (
+token #481 PHP_ATTRIBUTE #[
+token #482 PHP_STRING Anon2
+token #483 PHP_TOKEN (
+token #484 PHP_NUMBER 9
+token #485 PHP_TOKEN )
+token #486 PHP_TOKEN ]
+token #487 WHITESPACE  
+token #488 PHP_TYPE_INT int
+token #489 PHP_OPERATOR |
+token #490 PHP_TYPE_BOOL bool
+token #491 WHITESPACE  
+token #492 PHP_VARIABLE $pram1
+token #493 PHP_TOKEN )
+token #494 PHP_TOKEN :
+token #495 WHITESPACE  
+token #496 PHP_TYPE_INT int
+token #497 PHP_OPERATOR |
+token #498 PHP_TYPE_STRING string
+token #499 WHITESPACE  
+token #500 PHP_CURLY_OPEN {
+token #501 WHITESPACE \n        
+token #502 PHP_RETURN return
+token #503 WHITESPACE  
+token #504 PHP_NUMBER 1
+token #505 PHP_SEMICOLON ;
+token #506 WHITESPACE \n    
+token #507 PHP_CURLY_CLOSE }
+token #508 WHITESPACE \n
+token #509 PHP_CURLY_CLOSE }
+token #510 PHP_SEMICOLON ;
+token #511 WHITESPACE \n\n
+token #512 PHP_ATTRIBUTE #[
+token #513 PHP_STRING Func1
+token #514 PHP_TOKEN (
+token #515 PHP_NUMBER 1
+token #516 PHP_TOKEN )
+token #517 PHP_TOKEN ]
+token #518 WHITESPACE \n
+token #519 PHP_FUNCTION function
+token #520 WHITESPACE  
+token #521 PHP_STRING func1
+token #522 PHP_TOKEN (
+token #523 PHP_TOKEN )
+token #524 WHITESPACE  
+token #525 PHP_CURLY_OPEN {
+token #526 PHP_CURLY_CLOSE }
+token #527 WHITESPACE \n\n
+token #528 PHP_ATTRIBUTE #[
+token #529 PHP_STRING Func2
+token #530 PHP_TOKEN (
+token #531 PHP_NUMBER 1
+token #532 PHP_TOKEN )
+token #533 PHP_TOKEN ]
+token #534 WHITESPACE \n
+token #535 PHP_FUNCTION function
+token #536 WHITESPACE  
+token #537 PHP_STRING func2
+token #538 PHP_TOKEN (
+token #539 PHP_ATTRIBUTE #[
+token #540 PHP_STRING Func2
+token #541 PHP_TOKEN (
+token #542 PHP_NUMBER 2
+token #543 PHP_TOKEN )
+token #544 PHP_TOKEN ]
+token #545 WHITESPACE  
+token #546 PHP_TYPE_INT int
+token #547 PHP_OPERATOR |
+token #548 PHP_TYPE_STRING string
+token #549 WHITESPACE  
+token #550 PHP_VARIABLE $param
+token #551 PHP_TOKEN )
+token #552 PHP_TOKEN :
+token #553 WHITESPACE  
+token #554 PHP_TYPE_VOID void
+token #555 WHITESPACE  
+token #556 PHP_CURLY_OPEN {
+token #557 PHP_CURLY_CLOSE }
+token #558 WHITESPACE \n\n
+token #559 PHP_VARIABLE $labmda1
+token #560 WHITESPACE  
+token #561 PHP_OPERATOR =
+token #562 WHITESPACE  
+token #563 PHP_ATTRIBUTE #[
+token #564 PHP_STRING Lambda1
+token #565 PHP_TOKEN (
+token #566 PHP_NUMBER 1
+token #567 PHP_TOKEN )
+token #568 PHP_TOKEN ]
+token #569 WHITESPACE  
+token #570 PHP_FUNCTION function
+token #571 PHP_TOKEN (
+token #572 PHP_TOKEN )
+token #573 WHITESPACE  
+token #574 PHP_CURLY_OPEN {
+token #575 PHP_CURLY_CLOSE }
+token #576 PHP_SEMICOLON ;
+token #577 WHITESPACE \n
+token #578 PHP_VARIABLE $labmda2
+token #579 WHITESPACE  
+token #580 PHP_OPERATOR =
+token #581 WHITESPACE  
+token #582 PHP_ATTRIBUTE #[
+token #583 PHP_STRING Lambda2
+token #584 PHP_TOKEN (
+token #585 PHP_NUMBER 1
+token #586 PHP_TOKEN )
+token #587 PHP_TOKEN ]
+token #588 WHITESPACE  
+token #589 PHP_ATTRIBUTE #[
+token #590 PHP_STRING Lambda3
+token #591 PHP_TOKEN (
+token #592 PHP_TOKEN )
+token #593 PHP_TOKEN ]
+token #594 WHITESPACE  
+token #595 PHP_FUNCTION function
+token #596 PHP_TOKEN (
+token #597 PHP_TOKEN )
+token #598 PHP_TOKEN :
+token #599 WHITESPACE  
+token #600 PHP_TYPE_VOID void
+token #601 WHITESPACE  
+token #602 PHP_CURLY_OPEN {
+token #603 PHP_CURLY_CLOSE }
+token #604 PHP_SEMICOLON ;
+token #605 WHITESPACE \n\n
+token #606 PHP_VARIABLE $arrow1
+token #607 WHITESPACE  
+token #608 PHP_OPERATOR =
+token #609 WHITESPACE  
+token #610 PHP_ATTRIBUTE #[
+token #611 PHP_STRING Arrow1
+token #612 PHP_TOKEN (
+token #613 PHP_NUMBER 1
+token #614 PHP_TOKEN )
+token #615 PHP_TOKEN ]
+token #616 WHITESPACE  
+token #617 PHP_FN fn
+token #618 PHP_TOKEN (
+token #619 PHP_TOKEN )
+token #620 WHITESPACE  
+token #621 PHP_OPERATOR =>
+token #622 WHITESPACE  
+token #623 PHP_NUMBER 100
+token #624 PHP_SEMICOLON ;
+token #625 WHITESPACE \n
+token #626 PHP_VARIABLE $arrow2
+token #627 WHITESPACE  
+token #628 PHP_OPERATOR =
+token #629 WHITESPACE  
+token #630 PHP_ATTRIBUTE #[
+token #631 PHP_STRING Arrow2
+token #632 PHP_TOKEN (
+token #633 PHP_NUMBER 1
+token #634 PHP_TOKEN )
+token #635 PHP_TOKEN ,
+token #636 WHITESPACE  
+token #637 PHP_STRING Arrow2
+token #638 PHP_TOKEN (
+token #639 PHP_NUMBER 2
+token #640 PHP_TOKEN ,
+token #641 WHITESPACE  
+token #642 PHP_CONSTANT_ENCAPSED_STRING "test"
+token #643 PHP_TOKEN )
+token #644 PHP_TOKEN ]
+token #645 WHITESPACE  
+token #646 PHP_FN fn
+token #647 PHP_TOKEN (
+token #648 PHP_TOKEN )
+token #649 PHP_TOKEN :
+token #650 WHITESPACE  
+token #651 PHP_TYPE_INT int
+token #652 PHP_OPERATOR |
+token #653 PHP_TYPE_STRING string
+token #654 WHITESPACE  
+token #655 PHP_OPERATOR =>
+token #656 WHITESPACE  
+token #657 PHP_NUMBER 100
+token #658 PHP_SEMICOLON ;
+token #659 WHITESPACE \n

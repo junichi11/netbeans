@@ -46,7 +46,7 @@ import org.netbeans.api.annotations.common.NullAllowed;
  *
  * @see https://wiki.php.net/rfc/arrow_functions_v2
  */
-public class ArrowFunctionDeclaration extends Expression {
+public class ArrowFunctionDeclaration extends Expression implements Attributed {
 
     private final boolean isReference;
     private final boolean isStatic;
@@ -54,6 +54,8 @@ public class ArrowFunctionDeclaration extends Expression {
     @NullAllowed
     private final Expression returnType;
     private final Expression expression;
+    // @GuardedBy(this)
+    private final List<Attribute> attributes = new ArrayList<>();
 
     public ArrowFunctionDeclaration(int start, int end, List formalParameters, Expression returnType, Expression expression, boolean isReference, boolean isStatic) {
         super(start, end);
@@ -114,6 +116,22 @@ public class ArrowFunctionDeclaration extends Expression {
         return isStatic;
     }
 
+    public synchronized void addAttributes(List<Attribute> attributes) {
+        this.attributes.addAll(attributes);
+    }
+
+    /**
+     * Get the attributes of this.
+     *
+     * e.g. {@code $fn = #[A(1)] fn () => 1;}
+     *
+     * @return the attributes
+     */
+    @Override
+    public synchronized List<Attribute> getAttributes() {
+        return Collections.unmodifiableList(attributes);
+    }
+
     @Override
     public void accept(Visitor visitor) {
         visitor.visit(this);
@@ -121,6 +139,7 @@ public class ArrowFunctionDeclaration extends Expression {
 
     @Override
     public String toString() {
+        // TODO show attributes?
         StringBuilder sbParams = new StringBuilder();
         getFormalParameters().forEach((param) -> sbParams.append(param).append(",")); // NOI18N
         return (isStatic() ? "static " : " ") // NOI18N

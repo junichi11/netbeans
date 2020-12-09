@@ -19,24 +19,33 @@
 package org.netbeans.modules.php.editor.parser.astnodes;
 
 /**
- * Represents a function formal parameter
- * <pre>e.g.<pre> $a,
+ * Represents a function formal parameter.
+ *
+ * e.g.
+ * <pre>
+ * $a,
  * MyClass $a,
  * $a = 3,
  * int $a = 3
+ * </pre>
  */
 public class FormalParameter extends ASTNode {
 
     private Expression parameterType;
     private Expression parameterName;
     private Expression defaultValue;
+    private final boolean isAttributeDeclaration;
 
-    public FormalParameter(int start, int end, Expression type, final Expression parameterName, Expression defaultValue) {
+    public FormalParameter(int start, int end, Expression type, final Expression parameterName, Expression defaultValue, boolean isAttributeDeclaration) {
         super(start, end);
-
         this.parameterName = parameterName;
         this.parameterType = type;
         this.defaultValue = defaultValue;
+        this.isAttributeDeclaration = isAttributeDeclaration;
+    }
+
+    public FormalParameter(int start, int end, Expression type, final Expression parameterName, Expression defaultValue) {
+        this(start, end, type, parameterName, defaultValue, false);
     }
 
     public FormalParameter(int start, int end, Expression type, final Reference parameterName, Expression defaultValue) {
@@ -88,6 +97,10 @@ public class FormalParameter extends ASTNode {
 
     public Expression getParameterType() {
         return parameterType;
+    }
+
+    public boolean isAttributeDeclaration() {
+        return isAttributeDeclaration;
     }
 
     @Override

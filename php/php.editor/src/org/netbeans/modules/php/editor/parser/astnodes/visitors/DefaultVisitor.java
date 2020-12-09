@@ -28,6 +28,11 @@ import org.netbeans.modules.php.editor.parser.astnodes.ArrayDimension;
 import org.netbeans.modules.php.editor.parser.astnodes.ArrayElement;
 import org.netbeans.modules.php.editor.parser.astnodes.ArrowFunctionDeclaration;
 import org.netbeans.modules.php.editor.parser.astnodes.Assignment;
+import org.netbeans.modules.php.editor.parser.astnodes.Attribute;
+import org.netbeans.modules.php.editor.parser.astnodes.AttributeDeclaration;
+import org.netbeans.modules.php.editor.parser.astnodes.Attributed;
+import org.netbeans.modules.php.editor.parser.astnodes.AttributedExpression;
+import org.netbeans.modules.php.editor.parser.astnodes.AttributedStatement;
 import org.netbeans.modules.php.editor.parser.astnodes.BackTickExpression;
 import org.netbeans.modules.php.editor.parser.astnodes.Block;
 import org.netbeans.modules.php.editor.parser.astnodes.BreakStatement;
@@ -183,6 +188,29 @@ public class DefaultVisitor implements Visitor {
     }
 
     @Override
+    public void visit(Attribute attribute) {
+        scan(attribute.getAttributeDeclarations());
+    }
+
+    @Override
+    public void visit(AttributeDeclaration attributeDeclaration) {
+        scan(attributeDeclaration.getAttributeName());
+        scan(attributeDeclaration.getParameters());
+    }
+
+    @Override
+    public void visit(AttributedExpression attributedExpression) {
+        scan(attributedExpression.getAttributes());
+        scan(attributedExpression.getExpression());
+    }
+
+    @Override
+    public void visit(AttributedStatement attributedStatement) {
+        scan(attributedStatement.getAttributes());
+        scan(attributedStatement.getStatement());
+    }
+
+    @Override
     public void visit(BackTickExpression node) {
         scan(node.getExpressions());
     }
@@ -323,6 +351,9 @@ public class DefaultVisitor implements Visitor {
 
     @Override
     public void visit(FormalParameter node) {
+        if (node instanceof Attributed) {
+            scan(((Attributed) node).getAttributes());
+        }
         scan(node.getParameterType());
         scan(node.getParameterName());
         scan(node.getDefaultValue());

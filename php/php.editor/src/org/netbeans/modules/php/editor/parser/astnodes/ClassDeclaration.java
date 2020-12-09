@@ -21,9 +21,9 @@ package org.netbeans.modules.php.editor.parser.astnodes;
 import java.util.List;
 
 /**
- * Represents a class declaration
- * <pre>
- * <pre>e.g.<pre>
+ * Represents a class declaration.
+ *
+ * <pre>e.g.
  * class MyClass { },
  * class MyClass extends SuperClass implements Interface1, Interface2 {
  *   const MY_CONSTANT = 3;
@@ -31,6 +31,7 @@ import java.util.List;
  *   var $anotherOne;
  *   private function myFunction($a) { }
  * }
+ * </pre>
  */
 public class ClassDeclaration extends TypeDeclaration {
 
@@ -69,6 +70,7 @@ public class ClassDeclaration extends TypeDeclaration {
 
     @Override
     public String toString() {
+        // TODO attributed
         StringBuilder sb = new StringBuilder();
         for (Expression expression : getInterfaes()) {
             sb.append(expression).append(","); //NOI18N

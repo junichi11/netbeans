@@ -18,42 +18,27 @@
  */
 package org.netbeans.modules.php.editor.parser.astnodes;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
-/**
- * Represents a function declaration in a class. Holds the function modifier
- *
- * @see FunctionDeclaration
- */
-public class MethodDeclaration extends BodyDeclaration {
+public class AttributedStatement extends Statement {
 
-    private FunctionDeclaration function;
+    private final List<Attribute> attributes = new ArrayList<>();
+    private final Statement statement;
 
-    public MethodDeclaration(int start, int end, int modifier, FunctionDeclaration function, boolean shouldComplete) {
-        super(start, end, modifier, shouldComplete);
-
-        if (function == null) {
-            throw new IllegalArgumentException();
-        }
-        this.function = function;
+    public AttributedStatement(int start, int end, List<Attribute> attributes, Statement statement) {
+        super(start, end);
+        this.attributes.addAll(attributes);
+        this.statement = statement;
     }
 
-    public MethodDeclaration(int start, int end, int modifier, FunctionDeclaration function) {
-        this(start, end, modifier, function, false);
-    }
-
-    /**
-     * The function declaration component of this method
-     *
-     * @return function declaration component of this method
-     */
-    public FunctionDeclaration getFunction() {
-        return function;
-    }
-
-    @Override
     public List<Attribute> getAttributes() {
-        return getFunction().getAttributes();
+        return Collections.unmodifiableList(attributes);
+    }
+
+    public Statement getStatement() {
+        return statement;
     }
 
     @Override
@@ -63,8 +48,9 @@ public class MethodDeclaration extends BodyDeclaration {
 
     @Override
     public String toString() {
-        // TODO attributed
-        return "" + getFunction(); //NOI18N
+        StringBuilder attrs = new StringBuilder();
+        getAttributes().forEach(attribute -> attrs.append(attribute).append(" ")); // NOI18N
+        return attrs.toString() + statement;
     }
 
 }

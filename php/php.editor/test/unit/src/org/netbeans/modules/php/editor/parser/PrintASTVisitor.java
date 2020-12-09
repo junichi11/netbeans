@@ -238,6 +238,37 @@ public class PrintASTVisitor implements Visitor {
     }
 
     @Override
+    public void visit(Attribute attribute) {
+        XMLPrintNode printNode = new XMLPrintNode(attribute, "Attribute");
+        printNode.addChildrenGroup("AttributeDeclarations", attribute.getAttributeDeclarations());
+        printNode.print(this);
+    }
+
+    @Override
+    public void visit(AttributeDeclaration attributeDeclaration) {
+        XMLPrintNode printNode = new XMLPrintNode(attributeDeclaration, "AttributeDeclaration");
+        printNode.addChild("AttributeName", attributeDeclaration.getAttributeName());
+        printNode.addChildrenGroup("AttributeParameters", attributeDeclaration.getParameters());
+        printNode.print(this);
+    }
+
+    @Override
+    public void visit(AttributedExpression attributedExpression) {
+        XMLPrintNode printNode = new XMLPrintNode(attributedExpression, "AttributedExpression");
+        printNode.addChildrenGroup("Attributes", attributedExpression.getAttributes());
+        printNode.addChild(attributedExpression.getExpression());
+        printNode.print(this);
+    }
+
+    @Override
+    public void visit(AttributedStatement attributedStatement) {
+        XMLPrintNode printNode = new XMLPrintNode(attributedStatement, "AttributedStatement");
+        printNode.addChildrenGroup("Attributes", attributedStatement.getAttributes());
+        printNode.addChild(attributedStatement.getStatement());
+        printNode.print(this);
+    }
+
+    @Override
     public void visit(BackTickExpression node) {
         XMLPrintNode printNode = new XMLPrintNode(node, "BackTickExpression");
         printNode.addChildren(node.getExpressions());
@@ -441,6 +472,9 @@ public class PrintASTVisitor implements Visitor {
     public void visit(FormalParameter node) {
         XMLPrintNode printNode = new XMLPrintNode(node, "FormalParameter",
                 new String[]{"isMandatory", (node.isMandatory()?"true":"false"), "isVariadic", (node.isVariadic() ? "true" : "false")});
+        if (node instanceof Attributed) {
+            printNode.addChildrenGroup("Attributes", ((Attributed) node).getAttributes());
+        }
         printNode.addChild("ParametrType", node.getParameterType());
         printNode.addChild("ParametrName", node.getParameterName());
         printNode.addChild("DefaultValue", node.getDefaultValue());

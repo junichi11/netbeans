@@ -38,7 +38,7 @@ import org.netbeans.api.annotations.common.NullAllowed;
  * new class(10) extends SomeClass implements SomeInterface {...}
  * </pre>
  */
-public class ClassInstanceCreation extends Expression {
+public class ClassInstanceCreation extends Expression implements Attributed {
 
     // common
     private final List<Expression> ctorParams = new ArrayList<>();
@@ -52,6 +52,7 @@ public class ClassInstanceCreation extends Expression {
     private Expression superClass;
     private final List<Expression> interfaces = new ArrayList<>();
     private Block body;
+    private final List<Attribute> attributes = new ArrayList<>();
 
 
     // ctor
@@ -69,7 +70,7 @@ public class ClassInstanceCreation extends Expression {
 
     // anonymous
     private ClassInstanceCreation(String fileName, int classCounter, int start, int end, int classStartOffset, @NullAllowed List<Expression> ctorParams,
-            @NullAllowed Expression superClass, @NullAllowed List<Expression> interfaces, @NonNull Block body) {
+            @NullAllowed Expression superClass, @NullAllowed List<Expression> interfaces, @NonNull Block body, List<Attribute> attributes) {
         super(start, end);
         assert classCounter > 0 : classCounter;
         assert classStartOffset > -1 : classStartOffset;
@@ -85,11 +86,17 @@ public class ClassInstanceCreation extends Expression {
             this.interfaces.addAll(interfaces);
         }
         this.body = body;
+        this.attributes.addAll(attributes);
+    }
+
+    public static ClassInstanceCreation anonymous(String fileName, int classCounter, int start, int end, int classStartOffset, List<Expression> ctorParams,
+            Expression superClass, List<Expression> interfaces, Block body, List<Attribute> attributes) {
+        return new ClassInstanceCreation(fileName, classCounter, start, end, classStartOffset, ctorParams, superClass, interfaces, body, attributes);
     }
 
     public static ClassInstanceCreation anonymous(String fileName, int classCounter, int start, int end, int classStartOffset, List<Expression> ctorParams,
             Expression superClass, List<Expression> interfaces, Block body) {
-        return new ClassInstanceCreation(fileName, classCounter, start, end, classStartOffset, ctorParams, superClass, interfaces, body);
+        return new ClassInstanceCreation(fileName, classCounter, start, end, classStartOffset, ctorParams, superClass, interfaces, body, Collections.emptyList());
     }
 
     public boolean isAnonymous() {
@@ -135,6 +142,11 @@ public class ClassInstanceCreation extends Expression {
     }
 
     @Override
+    public List<Attribute> getAttributes() {
+        return Collections.unmodifiableList(attributes);
+    }
+
+    @Override
     public void accept(Visitor visitor) {
         visitor.visit(this);
     }
@@ -145,6 +157,7 @@ public class ClassInstanceCreation extends Expression {
         sb.append("new "); // NOI18N
         boolean anonymous = isAnonymous();
         if (anonymous) {
+            getAttributes().forEach(attribute -> sb.append(attribute).append(" ")); // NOI18N
             sb.append("class"); // NOI18N
         } else {
             sb.append(className);

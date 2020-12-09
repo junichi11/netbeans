@@ -256,7 +256,12 @@ parser code {:
 
 :}
 
-/* terminals */
+/*
+ * terminals
+ *
+ * To keep existing values(see: ASTPHP5Symbols), add new one to end.
+ * If the values changes, it's incompatible.
+ */
 
 terminal String T_EXIT;
 terminal String T_IF;
@@ -382,6 +387,7 @@ terminal T_POW_EQUAL;
 terminal T_ELLIPSIS;
 terminal T_COALESCE;
 terminal T_COALESCE_EQUAL;
+terminal T_ATTRIBUTE;
 
 /* Non terminals */
 
@@ -454,6 +460,7 @@ non terminal Expression expr_with_yields_and_error;
 non terminal Expression expr_without_class_instance;
 non terminal Expression yield_expr;
 non terminal Expression yield_from_expr;
+non terminal Expression inline_function;
 non terminal MatchExpression match;
 non terminal List match_arm_list;
 non terminal List non_empty_match_arm_list;
@@ -575,6 +582,20 @@ non terminal Expression static_array_creation;
 non terminal VariableBase base_variable_with_function_calls;
 
 non terminal List class_name_list;
+/*
+ * NETBEANS-4443 PHP 8.0 Attribute Syntax
+ * - https://wiki.php.net/rfc/attributes_v2
+ * - https://wiki.php.net/rfc/shorter_attribute_syntax
+ * - https://wiki.php.net/rfc/shorter_attribute_syntax_change
+ */
+non terminal Attribute attribute;
+non terminal List<Attribute> attributes;
+non terminal AttributeDeclaration attribute_decl;
+non terminal List<AttributeDeclaration> attribute_group;
+non terminal Statement attributed_statement;
+non terminal Statement attributed_class_statement;
+non terminal Statement attributed_trait_statement;
+non terminal FormalParameter attributed_parameter;
 
 precedence nonassoc T_THROW;
 precedence left T_INCLUDE, T_INCLUDE_ONCE, T_EVAL, T_REQUIRE, T_REQUIRE_ONCE;
@@ -1110,13 +1131,8 @@ top_statement_list:sList top_statement:statement
 :}
 ;
 
-top_statement ::=
-statement:statement
-{:
-    RESULT = statement;
-:}
-
-| function_declaration_statement:statement
+attributed_statement ::=
+function_declaration_statement:statement
 {:
     RESULT = statement;
 :}
@@ -1124,6 +1140,28 @@ statement:statement
 | class_declaration_statement:statement
 {:
     RESULT = statement;
+:}
+;
+
+top_statement ::=
+statement:statement
+{:
+    RESULT = statement;
+:}
+
+| attributed_statement:statement
+{:
+    RESULT = statement;
+:}
+
+| attributes:attributes attributed_statement:statement
+{:
+    if (statement instanceof FunctionDeclaration) {
+        ((FunctionDeclaration) statement).addAttributes(attributes);
+    } else if (statement instanceof TypeDeclaration) {
+        ((TypeDeclaration) statement).addAttributes(attributes);
+    }
+    RESULT = new AttributedStatement(attributesleft, statementright, attributes, statement);
 :}
 
 | T_HALT_COMPILER:halt
@@ -1168,6 +1206,55 @@ statement:statement
 | constant_declaration:list T_SEMICOLON:e
 {:
     RESULT = new ConstantDeclaration(listleft, eright, ASTPHP5Parser.IMPLICIT_PUBLIC, list, true);
+:}
+;
+
+attribute_decl ::=
+class_name:name
+{:
+    RESULT = new AttributeDeclaration(nameleft, nameright, name, null);
+:}
+
+| class_name:name T_OPEN_PARENTHESE function_call_parameter_list:paramList T_CLOSE_PARENTHESE:e
+{:
+    RESULT = new AttributeDeclaration(nameleft, eright, name, paramList);
+:}
+;
+
+attribute_group ::=
+attribute_decl:decl
+{:
+    List list = new LinkedList();
+    list.add(decl);
+    RESULT = list;
+:}
+
+| attribute_group:list T_COMMA attribute_decl:decl
+{:
+    list.add(decl);
+    RESULT = list;
+:}
+;
+
+attribute ::=
+T_ATTRIBUTE:start attribute_group:group possible_comma T_CLOSE_RECT:end
+{:
+    RESULT = new Attribute(startleft, endright, group);
+:}
+;
+
+attributes ::=
+attribute:attribute
+{:
+    List list = new LinkedList();
+    list.add(attribute);
+    RESULT = list;
+:}
+
+| attributes:list attribute:attribute
+{:
+    list.add(attribute);
+    RESULT = list;
 :}
 ;
 
@@ -1307,14 +1394,14 @@ statement:statement
     RESULT = statement;
 :}
 
-| function_declaration_statement:statement
+| attributed_statement:statement
 {:
     RESULT = statement;
 :}
 
-| class_declaration_statement:statement
+| attributes:attributes attributed_statement:statement
 {:
-    RESULT = statement;
+    RESULT = new AttributedStatement(attributesleft, statementright, attributes, statement);
 :}
 ;
 
@@ -1825,7 +1912,7 @@ trait_statement_list:list trait_statement:traitStatement
 :}
 ;
 
-trait_statement ::=
+attributed_trait_statement ::=
 variable_modifiers:modifier optional_class_type_without_static:fieldType class_variable_declaration:decList T_SEMICOLON:end
 {:
     FieldsDeclaration fieldsDeclaration = new FieldsDeclaration(modifierleft, endright, modifier.intValue(), fieldType, decList);
@@ -1842,6 +1929,21 @@ method_body:body
     FunctionDeclaration functionDeclaration = new FunctionDeclaration(startleft, bodyright, functionId, paramList, returnType, body, isReference.booleanValue());
     MethodDeclaration methodDeclaration = new MethodDeclaration(methodStart, bodyright, modifier.intValue(), functionDeclaration, true);
     RESULT = methodDeclaration;
+:}
+;
+
+trait_statement ::=
+attributed_trait_statement:statement
+{:
+    RESULT = statement;
+:}
+
+| attributes:attributes attributed_trait_statement:statement
+{:
+    if (statement instanceof BodyDeclaration) {
+        ((BodyDeclaration) statement).addAttributes(attributes);
+    }
+    RESULT = new AttributedStatement(attributesleft, statementright, attributes, statement);
 :}
 
 | T_VAR_COMMENT:varComment
@@ -2186,17 +2288,29 @@ non_empty_parameter_list:list possible_comma
 ;
 
 non_empty_parameter_list ::=
-parameter:parameter
+attributed_parameter:parameter
 {:
     List list = new LinkedList();
     list.add(parameter);
     RESULT = list;
 :}
 
-| non_empty_parameter_list:list T_COMMA parameter:parameter
+| non_empty_parameter_list:list T_COMMA attributed_parameter:parameter
 {:
     list.add(parameter);
     RESULT = list;
+:}
+;
+
+attributed_parameter ::=
+attributes:attributes parameter:param
+{:
+    RESULT = new AttributedFormalParameter(attributesleft, paramright, attributes, param);
+:}
+
+| parameter:param
+{:
+    RESULT = param;
 :}
 ;
 
@@ -2530,7 +2644,7 @@ class_statement_list:list class_statement:classStatement
 :}
 ;
 
-class_statement ::=
+attributed_class_statement ::=
 variable_modifiers:modifier optional_class_type_without_static:fieldType class_variable_declaration:decList T_SEMICOLON:end
 {:
     FieldsDeclaration fieldsDeclaration = new FieldsDeclaration(modifierleft, endright, modifier.intValue(), fieldType, decList);
@@ -2555,6 +2669,21 @@ method_body:body
     FunctionDeclaration functionDeclaration = new FunctionDeclaration(startleft, bodyright, functionId, paramList, returnType, body, isReference.booleanValue());
     MethodDeclaration methodDeclaration = new MethodDeclaration(methodStart, bodyright, modifier.intValue(), functionDeclaration, true);
     RESULT = methodDeclaration;
+:}
+;
+
+class_statement ::=
+attributed_class_statement:statement
+{:
+    RESULT = statement;
+:}
+
+| attributes:attributes attributed_class_statement:statement
+{:
+    if (statement instanceof BodyDeclaration) {
+        ((BodyDeclaration) statement).addAttributes(attributes);
+    }
+    RESULT = new AttributedStatement(attributesleft, statementright, attributes, statement);
 :}
 
 | T_VAR_COMMENT:varComment
@@ -3440,7 +3569,41 @@ T_LIST:start T_OPEN_PARENTHESE array_pair_list:varList T_CLOSE_PARENTHESE:close 
     RESULT = result;
 :}
 
-| T_FUNCTION:s is_reference:isReference
+| inline_function:inline
+{:
+    RESULT = inline;
+:}
+
+| attributes:attributes inline_function:inline
+{:
+    if (inline instanceof ArrowFunctionDeclaration) {
+        ((ArrowFunctionDeclaration) inline).addAttributes(attributes);
+    } else if (inline instanceof LambdaFunctionDeclaration) {
+        ((LambdaFunctionDeclaration) inline).addAttributes(attributes);
+    }
+    RESULT = new AttributedExpression(attributesleft, inlineright, attributes, inline);
+:}
+
+| expression_array_access:eaa
+{:
+    RESULT = eaa;
+:}
+
+| T_THROW:token expr:expr
+{:
+    // PHP 8.0: https://wiki.php.net/rfc/throw_expression
+    RESULT = new ThrowExpression(tokenleft, exprright, expr);
+:}
+
+| match:match
+{:
+    // PHP 8.0: https://wiki.php.net/rfc/match_expression_v2
+    RESULT = match;
+:}
+;
+
+inline_function ::=
+T_FUNCTION:s is_reference:isReference
 T_OPEN_PARENTHESE parameter_list:paramList T_CLOSE_PARENTHESE
 lexical_vars:varsList
 optional_return_type:returnType
@@ -3470,23 +3633,6 @@ T_CURLY_OPEN:blockStart inner_statement_list:list T_CURLY_CLOSE:blockEnd
 {:
     // PHP 7.4
     RESULT = new ArrowFunctionDeclaration(stleft, exprright, paramList, returnType, expr, isReference.booleanValue(), true);
-:}
-
-| expression_array_access:eaa
-{:
-    RESULT = eaa;
-:}
-
-| T_THROW:token expr:expr
-{:
-    // PHP 8.0: https://wiki.php.net/rfc/throw_expression
-    RESULT = new ThrowExpression(tokenleft, exprright, expr);
-:}
-
-| match:match
-{:
-    // PHP 8.0: https://wiki.php.net/rfc/match_expression_v2
-    RESULT = match;
 :}
 ;
 
@@ -5268,6 +5414,16 @@ T_STRING:value
 
 anonymous_class ::=
 T_NEW:start T_CLASS:c ctor_arguments:ctor
+extends_from:superClass implements_list:interfaces
+T_CURLY_OPEN:blockStart class_statement_list:statementList T_CURLY_CLOSE:blockEnd
+{:
+    final int counter = parser.incrementAndGetAnonymousClassCounter();
+    Block block = new Block(blockStartleft, blockEndright, statementList);
+    ClassInstanceCreation classInstance = ClassInstanceCreation.anonymous(parser.getFileName(), counter, startleft, blockEndright, cleft, ctor, superClass, interfaces, block);
+    RESULT = classInstance;
+:}
+
+| T_NEW:start attributes:attributes T_CLASS:c ctor_arguments:ctor
 extends_from:superClass implements_list:interfaces
 T_CURLY_OPEN:blockStart class_statement_list:statementList T_CURLY_CLOSE:blockEnd
 {:

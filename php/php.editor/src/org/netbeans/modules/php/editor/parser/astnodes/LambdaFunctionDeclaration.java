@@ -19,19 +19,23 @@
 package org.netbeans.modules.php.editor.parser.astnodes;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import org.netbeans.api.annotations.common.CheckForNull;
 import org.netbeans.api.annotations.common.NullAllowed;
 
 /**
- * Represents a lambda function declaration
- * e.g.<pre>
+ * Represents a lambda function declaration.
+ *
+ * e.g.
+ * <pre>
  * function & (parameters) use (lexical vars) { body }
  * function & (parameters) use (lexical vars): return_type { body }
  * </pre>
+ *
  * @see http://wiki.php.net/rfc/closures
  */
-public class LambdaFunctionDeclaration extends Expression {
+public class LambdaFunctionDeclaration extends Expression implements Attributed {
 
     private final boolean isReference;
     private final boolean isStatic;
@@ -40,7 +44,8 @@ public class LambdaFunctionDeclaration extends Expression {
     private final Expression returnType;
     private final List<Expression> lexicalVariables = new ArrayList<>();
     private final Block body;
-
+    // @GuardedBy(this)
+    private final List<Attribute> attributes = new ArrayList<>();
 
     public LambdaFunctionDeclaration(int start, int end, List formalParameters, Expression returnType, List lexicalVars, Block body, boolean isReference, boolean isStatic) {
         super(start, end);
@@ -73,7 +78,7 @@ public class LambdaFunctionDeclaration extends Expression {
      * @return the parameters of this declaration
      */
     public List<FormalParameter> getFormalParameters() {
-        return this.formalParameters;
+        return Collections.unmodifiableList(this.formalParameters);
     }
 
     /**
@@ -92,11 +97,12 @@ public class LambdaFunctionDeclaration extends Expression {
      * @return the lexical variables of this declaration
      */
     public List<Expression> getLexicalVariables() {
-        return this.lexicalVariables;
+        return Collections.unmodifiableList(this.lexicalVariables);
     }
 
     /**
      * True if this function's return variable will be referenced
+     *
      * @return True if this function's return variable will be referenced
      */
     public boolean isReference() {
@@ -104,10 +110,28 @@ public class LambdaFunctionDeclaration extends Expression {
     }
 
     /**
-     * e.g. $fnc = static function() {};
+     * Check whether fn() is static. e.g.{@code $fnc = static function() {};}
+     *
+     * @return {@code true} if it is static, otherwise {@code false}
      */
     public boolean isStatic() {
         return isStatic;
+    }
+
+    public synchronized void addAttributes(List<Attribute> attributes) {
+        this.attributes.addAll(attributes);
+    }
+
+    /**
+     * Get the attributes of this.
+     *
+     * e.g. {@code $fn = #[A(1)] function () {};}
+     *
+     * @return the attributes
+     */
+    @Override
+    public synchronized List<Attribute> getAttributes() {
+        return Collections.unmodifiableList(attributes);
     }
 
     @Override
@@ -117,6 +141,7 @@ public class LambdaFunctionDeclaration extends Expression {
 
     @Override
     public String toString() {
+        // TODO
         StringBuilder sbParams = new StringBuilder();
         for (FormalParameter formalParameter : getFormalParameters()) {
             sbParams.append(formalParameter).append(","); //NOI18N

@@ -18,12 +18,18 @@
  */
 package org.netbeans.modules.php.editor.parser.astnodes;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 /**
  * Base class for class member declarations
  */
-public abstract class BodyDeclaration extends Statement {
+public abstract class BodyDeclaration extends Statement implements Attributed {
 
     private int modifier;
+    // @GuardedBy(this)
+    private final List<Attribute> attributes = new ArrayList<>();
 
     public BodyDeclaration(int start, int end, int modifier, boolean shouldComplete) {
         super(start, end);
@@ -41,6 +47,31 @@ public abstract class BodyDeclaration extends Statement {
 
     public int getModifier() {
         return modifier;
+    }
+
+    public synchronized void addAttributes(List<Attribute> attributes) {
+        this.attributes.addAll(attributes);
+    }
+
+    /**
+     * Get attributes.
+     *
+     * e.g.
+     * <pre>
+     * #[A1(1)] // attribute
+     * pulic const CONSTANT = 'constant';
+     *
+     * #[A2(2)] // attribute
+     * public $x;
+     *
+     * #[A3(3)] // attribute
+     * public function fnc() {};
+     * </pre>
+     * @return attributes
+     */
+    @Override
+    public synchronized List<Attribute> getAttributes() {
+        return Collections.unmodifiableList(attributes);
     }
 
     /**

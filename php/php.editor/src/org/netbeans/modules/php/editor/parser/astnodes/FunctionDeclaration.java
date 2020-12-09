@@ -20,6 +20,7 @@ package org.netbeans.modules.php.editor.parser.astnodes;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import org.netbeans.api.annotations.common.CheckForNull;
 import org.netbeans.api.annotations.common.NullAllowed;
@@ -38,7 +39,7 @@ import org.netbeans.api.annotations.common.NullAllowed;
  * function foo(); -abstract function in class declaration
  * </pre>
  */
-public class FunctionDeclaration extends Statement {
+public class FunctionDeclaration extends Statement implements Attributed {
 
     private final boolean isReference;
     private final Identifier name;
@@ -46,7 +47,8 @@ public class FunctionDeclaration extends Statement {
     @NullAllowed
     private final Expression returnType;
     private final Block body;
-
+    // @GuardedBy(this)
+    private final List<Attribute> attributes = new ArrayList<>();
 
     private FunctionDeclaration(int start, int end, Identifier functionName, FormalParameter[] formalParameters, Expression returnType, Block body, boolean isReference) {
         super(start, end);
@@ -76,7 +78,7 @@ public class FunctionDeclaration extends Statement {
      * @return the parameters of this declaration
      */
     public List<FormalParameter> getFormalParameters() {
-        return this.formalParameters;
+        return Collections.unmodifiableList(this.formalParameters);
     }
 
     /**
@@ -104,6 +106,15 @@ public class FunctionDeclaration extends Statement {
      */
     public boolean isReference() {
         return isReference;
+    }
+
+    public synchronized void addAttributes(List<Attribute> attributes) {
+        this.attributes.addAll(attributes);
+    }
+
+    @Override
+    public synchronized List<Attribute> getAttributes() {
+        return Collections.unmodifiableList(attributes);
     }
 
     @Override

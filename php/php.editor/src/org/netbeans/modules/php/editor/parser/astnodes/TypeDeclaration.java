@@ -20,16 +20,19 @@ package org.netbeans.modules.php.editor.parser.astnodes;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /**
- * Represents base class for class declaration and interface declaration
+ * Represents base class for class declaration and interface declaration.
  */
-public abstract class TypeDeclaration extends Statement {
+public abstract class TypeDeclaration extends Statement implements Attributed {
 
     private Identifier name;
-    private ArrayList<Expression> interfaces = new ArrayList<>();
+    private final ArrayList<Expression> interfaces = new ArrayList<>();
     private Block body;
+    // @GuardedBy(this)
+    private final List<Attribute> attributes = new ArrayList<>();
 
     public TypeDeclaration(int start, int end, final Identifier name, final Expression[] interfaces, final Block body) {
         super(start, end);
@@ -47,7 +50,8 @@ public abstract class TypeDeclaration extends Statement {
     }
 
     /**
-     * The body component of this type declaration node
+     * The body component of this type declaration node.
+     *
      * @return body component of this type declaration node
      */
     public Block getBody() {
@@ -55,7 +59,8 @@ public abstract class TypeDeclaration extends Statement {
     }
 
     /**
-     * The name of the type declaration node
+     * The name of the type declaration node.
+     *
      * @return name of the type declaration node
      */
     public Identifier getName() {
@@ -63,11 +68,38 @@ public abstract class TypeDeclaration extends Statement {
     }
 
     /**
-     * List of interfaces that this type implements / extends
+     * List of interfaces that this type implements / extends.
+     *
+     * @return interfaces
      */
     public List<Expression> getInterfaes() {
-        return this.interfaces;
+        return Collections.unmodifiableList(this.interfaces);
     }
+
+    public synchronized void addAttributes(List<Attribute> attributes) {
+        this.attributes.addAll(attributes);
+    }
+
+    /**
+     * Get attributes.
+     *
+     * e.g.
+     * <pre>
+     * #[A1(1)]
+     * #[A2(2)]
+     * #[A3(3)]
+     * class Foo {}
+     *
+     * #[A1]
+     * interface MyInterface {}
+     * </pre>
+     * @return attributes
+     */
+    @Override
+    public synchronized List<Attribute> getAttributes() {
+        return Collections.unmodifiableList(attributes);
+    }
+
 
     @Override
     public String toString() {

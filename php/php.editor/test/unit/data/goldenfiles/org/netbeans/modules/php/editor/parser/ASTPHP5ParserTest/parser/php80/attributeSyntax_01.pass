@@ -1,0 +1,2546 @@
+<testresult testFile='attributeSyntax_01.php'>
+    <scanner>
+        <token id='T_ATTRIBUTE' start='815' end='817'>
+            <text>#[</text>
+        </token>
+        <token id='T_STRING' start='817' end='823'>
+            <text>Class1</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='823' end='824'>
+            <text>(</text>
+        </token>
+        <token id='T_LNUMBER' start='824' end='825'>
+            <text>1</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='825' end='826'>
+            <text>)</text>
+        </token>
+        <token id='T_CLOSE_RECT' start='826' end='827'>
+            <text>]</text>
+        </token>
+        <token id='T_CLASS' start='828' end='833'>
+            <text>class</text>
+        </token>
+        <token id='T_STRING' start='834' end='849'>
+            <text>AttributeSyntax</text>
+        </token>
+        <token id='T_CURLY_OPEN' start='850' end='851'>
+            <text>{</text>
+        </token>
+        <token id='T_ATTRIBUTE' start='856' end='858'>
+            <text>#[</text>
+        </token>
+        <token id='T_STRING' start='858' end='864'>
+            <text>Class1</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='864' end='865'>
+            <text>(</text>
+        </token>
+        <token id='T_LNUMBER' start='865' end='866'>
+            <text>2</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='866' end='867'>
+            <text>)</text>
+        </token>
+        <token id='T_CLOSE_RECT' start='867' end='868'>
+            <text>]</text>
+        </token>
+        <token id='T_ATTRIBUTE' start='873' end='875'>
+            <text>#[</text>
+        </token>
+        <token id='T_STRING' start='875' end='881'>
+            <text>Class2</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='881' end='882'>
+            <text>(</text>
+        </token>
+        <token id='T_LNUMBER' start='882' end='883'>
+            <text>2</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='883' end='884'>
+            <text>)</text>
+        </token>
+        <token id='T_CLOSE_RECT' start='884' end='885'>
+            <text>]</text>
+        </token>
+        <token id='T_PUBLIC' start='890' end='896'>
+            <text>public</text>
+        </token>
+        <token id='T_CONST' start='897' end='902'>
+            <text>const</text>
+        </token>
+        <token id='T_STRING' start='903' end='911'>
+            <text>CONSTANT</text>
+        </token>
+        <token id='T_EQUAL' start='912' end='913'>
+            <text>=</text>
+        </token>
+        <token id='T_CONSTANT_ENCAPSED_STRING' start='914' end='924'>
+            <text>&apos;constant&apos;</text>
+        </token>
+        <token id='T_SEMICOLON' start='924' end='925'>
+            <text>;</text>
+        </token>
+        <token id='T_ATTRIBUTE' start='931' end='933'>
+            <text>#[</text>
+        </token>
+        <token id='T_STRING' start='933' end='939'>
+            <text>Class1</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='939' end='940'>
+            <text>(</text>
+        </token>
+        <token id='T_LNUMBER' start='940' end='941'>
+            <text>3</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='941' end='942'>
+            <text>)</text>
+        </token>
+        <token id='T_CLOSE_RECT' start='942' end='943'>
+            <text>]</text>
+        </token>
+        <token id='T_PUBLIC' start='948' end='954'>
+            <text>public</text>
+        </token>
+        <token id='T_VARIABLE' start='955' end='961'>
+            <text>$field</text>
+        </token>
+        <token id='T_SEMICOLON' start='961' end='962'>
+            <text>;</text>
+        </token>
+        <token id='T_ATTRIBUTE' start='968' end='970'>
+            <text>#[</text>
+        </token>
+        <token id='T_STRING' start='970' end='976'>
+            <text>Class1</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='976' end='977'>
+            <text>(</text>
+        </token>
+        <token id='T_LNUMBER' start='977' end='978'>
+            <text>4</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='978' end='979'>
+            <text>)</text>
+        </token>
+        <token id='T_COMMA' start='979' end='980'>
+            <text>,</text>
+        </token>
+        <token id='T_STRING' start='981' end='987'>
+            <text>Class2</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='987' end='988'>
+            <text>(</text>
+        </token>
+        <token id='T_LNUMBER' start='988' end='989'>
+            <text>4</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='989' end='990'>
+            <text>)</text>
+        </token>
+        <token id='T_CLOSE_RECT' start='990' end='991'>
+            <text>]</text>
+        </token>
+        <token id='T_PUBLIC' start='1005' end='1011'>
+            <text>public</text>
+        </token>
+        <token id='T_VARIABLE' start='1012' end='1024'>
+            <text>$staticField</text>
+        </token>
+        <token id='T_SEMICOLON' start='1024' end='1025'>
+            <text>;</text>
+        </token>
+        <token id='T_ATTRIBUTE' start='1031' end='1033'>
+            <text>#[</text>
+        </token>
+        <token id='T_STRING' start='1033' end='1039'>
+            <text>Class1</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='1039' end='1040'>
+            <text>(</text>
+        </token>
+        <token id='T_LNUMBER' start='1040' end='1041'>
+            <text>5</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='1041' end='1042'>
+            <text>)</text>
+        </token>
+        <token id='T_CLOSE_RECT' start='1042' end='1043'>
+            <text>]</text>
+        </token>
+        <token id='T_PUBLIC' start='1048' end='1054'>
+            <text>public</text>
+        </token>
+        <token id='T_FUNCTION' start='1055' end='1063'>
+            <text>function</text>
+        </token>
+        <token id='T_STRING' start='1064' end='1070'>
+            <text>method</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='1070' end='1071'>
+            <text>(</text>
+        </token>
+        <token id='T_ATTRIBUTE' start='1071' end='1073'>
+            <text>#[</text>
+        </token>
+        <token id='T_STRING' start='1073' end='1079'>
+            <text>Class1</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='1079' end='1080'>
+            <text>(</text>
+        </token>
+        <token id='T_LNUMBER' start='1080' end='1081'>
+            <text>6</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='1081' end='1082'>
+            <text>)</text>
+        </token>
+        <token id='T_CLOSE_RECT' start='1082' end='1083'>
+            <text>]</text>
+        </token>
+        <token id='T_VARIABLE' start='1084' end='1091'>
+            <text>$param1</text>
+        </token>
+        <token id='T_COMMA' start='1091' end='1092'>
+            <text>,</text>
+        </token>
+        <token id='T_ATTRIBUTE' start='1093' end='1095'>
+            <text>#[</text>
+        </token>
+        <token id='T_STRING' start='1095' end='1101'>
+            <text>Class1</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='1101' end='1102'>
+            <text>(</text>
+        </token>
+        <token id='T_CONSTANT_ENCAPSED_STRING' start='1102' end='1107'>
+            <text>&apos;foo&apos;</text>
+        </token>
+        <token id='T_COMMA' start='1107' end='1108'>
+            <text>,</text>
+        </token>
+        <token id='T_CONSTANT_ENCAPSED_STRING' start='1109' end='1114'>
+            <text>&apos;bar&apos;</text>
+        </token>
+        <token id='T_COMMA' start='1114' end='1115'>
+            <text>,</text>
+        </token>
+        <token id='T_LNUMBER' start='1116' end='1117'>
+            <text>7</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='1117' end='1118'>
+            <text>)</text>
+        </token>
+        <token id='T_CLOSE_RECT' start='1118' end='1119'>
+            <text>]</text>
+        </token>
+        <token id='T_STRING' start='1120' end='1123'>
+            <text>int</text>
+        </token>
+        <token id='T_VARIABLE' start='1124' end='1130'>
+            <text>$pram2</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='1130' end='1131'>
+            <text>)</text>
+        </token>
+        <token id='T_CURLY_OPEN' start='1132' end='1133'>
+            <text>{</text>
+        </token>
+        <token id='T_CURLY_CLOSE' start='1133' end='1134'>
+            <text>}</text>
+        </token>
+        <token id='T_ATTRIBUTE' start='1140' end='1142'>
+            <text>#[</text>
+        </token>
+        <token id='T_STRING' start='1142' end='1148'>
+            <text>Class1</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='1148' end='1149'>
+            <text>(</text>
+        </token>
+        <token id='T_LNUMBER' start='1149' end='1150'>
+            <text>8</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='1150' end='1151'>
+            <text>)</text>
+        </token>
+        <token id='T_CLOSE_RECT' start='1151' end='1152'>
+            <text>]</text>
+        </token>
+        <token id='T_PUBLIC' start='1157' end='1163'>
+            <text>public</text>
+        </token>
+        <token id='T_STATIC' start='1164' end='1170'>
+            <text>static</text>
+        </token>
+        <token id='T_FUNCTION' start='1171' end='1179'>
+            <text>function</text>
+        </token>
+        <token id='T_STRING' start='1180' end='1192'>
+            <text>staticMethod</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='1192' end='1193'>
+            <text>(</text>
+        </token>
+        <token id='T_ATTRIBUTE' start='1193' end='1195'>
+            <text>#[</text>
+        </token>
+        <token id='T_STRING' start='1195' end='1201'>
+            <text>Class1</text>
+        </token>
+        <token id='T_NS_SEPARATOR' start='1201' end='1202'>
+            <text>\</text>
+        </token>
+        <token id='T_STRING' start='1202' end='1206'>
+            <text>Test</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='1206' end='1207'>
+            <text>(</text>
+        </token>
+        <token id='T_LNUMBER' start='1207' end='1208'>
+            <text>9</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='1208' end='1209'>
+            <text>)</text>
+        </token>
+        <token id='T_CLOSE_RECT' start='1209' end='1210'>
+            <text>]</text>
+        </token>
+        <token id='T_STRING' start='1211' end='1214'>
+            <text>int</text>
+        </token>
+        <token id='T_OR' start='1214' end='1215'>
+            <text>|</text>
+        </token>
+        <token id='T_STRING' start='1215' end='1221'>
+            <text>string</text>
+        </token>
+        <token id='T_VARIABLE' start='1222' end='1229'>
+            <text>$param1</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='1229' end='1230'>
+            <text>)</text>
+        </token>
+        <token id='T_NEKUDOTAIM' start='1230' end='1231'>
+            <text>:</text>
+        </token>
+        <token id='T_STRING' start='1232' end='1236'>
+            <text>bool</text>
+        </token>
+        <token id='T_OR' start='1236' end='1237'>
+            <text>|</text>
+        </token>
+        <token id='T_STRING' start='1237' end='1240'>
+            <text>int</text>
+        </token>
+        <token id='T_CURLY_OPEN' start='1241' end='1242'>
+            <text>{</text>
+        </token>
+        <token id='T_RETURN' start='1251' end='1257'>
+            <text>return</text>
+        </token>
+        <token id='T_STRING' start='1258' end='1263'>
+            <text>false</text>
+        </token>
+        <token id='T_SEMICOLON' start='1263' end='1264'>
+            <text>;</text>
+        </token>
+        <token id='T_CURLY_CLOSE' start='1269' end='1270'>
+            <text>}</text>
+        </token>
+        <token id='T_CURLY_CLOSE' start='1271' end='1272'>
+            <text>}</text>
+        </token>
+        <token id='T_ATTRIBUTE' start='1274' end='1276'>
+            <text>#[</text>
+        </token>
+        <token id='T_STRING' start='1276' end='1287'>
+            <text>ChildClass1</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='1287' end='1288'>
+            <text>(</text>
+        </token>
+        <token id='T_LNUMBER' start='1288' end='1289'>
+            <text>1</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='1289' end='1290'>
+            <text>)</text>
+        </token>
+        <token id='T_CLOSE_RECT' start='1290' end='1291'>
+            <text>]</text>
+        </token>
+        <token id='T_CLASS' start='1292' end='1297'>
+            <text>class</text>
+        </token>
+        <token id='T_STRING' start='1298' end='1318'>
+            <text>AttributeSyntaxChild</text>
+        </token>
+        <token id='T_EXTENDS' start='1319' end='1326'>
+            <text>extends</text>
+        </token>
+        <token id='T_STRING' start='1327' end='1342'>
+            <text>AttributeSyntax</text>
+        </token>
+        <token id='T_CURLY_OPEN' start='1343' end='1344'>
+            <text>{</text>
+        </token>
+        <token id='T_CURLY_CLOSE' start='1345' end='1346'>
+            <text>}</text>
+        </token>
+        <token id='T_ATTRIBUTE' start='1348' end='1350'>
+            <text>#[</text>
+        </token>
+        <token id='T_STRING' start='1350' end='1356'>
+            <text>Trait1</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='1356' end='1357'>
+            <text>(</text>
+        </token>
+        <token id='T_LNUMBER' start='1357' end='1358'>
+            <text>1</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='1358' end='1359'>
+            <text>)</text>
+        </token>
+        <token id='T_CLOSE_RECT' start='1359' end='1360'>
+            <text>]</text>
+        </token>
+        <token id='T_ATTRIBUTE' start='1361' end='1363'>
+            <text>#[</text>
+        </token>
+        <token id='T_STRING' start='1363' end='1369'>
+            <text>Trait2</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='1369' end='1370'>
+            <text>(</text>
+        </token>
+        <token id='T_LNUMBER' start='1370' end='1371'>
+            <text>1</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='1371' end='1372'>
+            <text>)</text>
+        </token>
+        <token id='T_CLOSE_RECT' start='1372' end='1373'>
+            <text>]</text>
+        </token>
+        <token id='T_TRAIT' start='1374' end='1379'>
+            <text>trait</text>
+        </token>
+        <token id='T_STRING' start='1380' end='1389'>
+            <text>TestTrait</text>
+        </token>
+        <token id='T_CURLY_OPEN' start='1390' end='1391'>
+            <text>{</text>
+        </token>
+        <token id='T_ATTRIBUTE' start='1396' end='1398'>
+            <text>#[</text>
+        </token>
+        <token id='T_STRING' start='1398' end='1404'>
+            <text>Trait1</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='1404' end='1405'>
+            <text>(</text>
+        </token>
+        <token id='T_LNUMBER' start='1405' end='1406'>
+            <text>2</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='1406' end='1407'>
+            <text>)</text>
+        </token>
+        <token id='T_CLOSE_RECT' start='1407' end='1408'>
+            <text>]</text>
+        </token>
+        <token id='T_PUBLIC' start='1413' end='1419'>
+            <text>public</text>
+        </token>
+        <token id='T_VARIABLE' start='1420' end='1426'>
+            <text>$field</text>
+        </token>
+        <token id='T_SEMICOLON' start='1426' end='1427'>
+            <text>;</text>
+        </token>
+        <token id='T_ATTRIBUTE' start='1433' end='1435'>
+            <text>#[</text>
+        </token>
+        <token id='T_STRING' start='1435' end='1441'>
+            <text>Trait1</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='1441' end='1442'>
+            <text>(</text>
+        </token>
+        <token id='T_LNUMBER' start='1442' end='1443'>
+            <text>3</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='1443' end='1444'>
+            <text>)</text>
+        </token>
+        <token id='T_CLOSE_RECT' start='1444' end='1445'>
+            <text>]</text>
+        </token>
+        <token id='T_PUBLIC' start='1450' end='1456'>
+            <text>public</text>
+        </token>
+        <token id='T_VARIABLE' start='1457' end='1469'>
+            <text>$staticField</text>
+        </token>
+        <token id='T_SEMICOLON' start='1469' end='1470'>
+            <text>;</text>
+        </token>
+        <token id='T_ATTRIBUTE' start='1476' end='1478'>
+            <text>#[</text>
+        </token>
+        <token id='T_STRING' start='1478' end='1484'>
+            <text>Trait1</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='1484' end='1485'>
+            <text>(</text>
+        </token>
+        <token id='T_LNUMBER' start='1485' end='1486'>
+            <text>4</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='1486' end='1487'>
+            <text>)</text>
+        </token>
+        <token id='T_CLOSE_RECT' start='1487' end='1488'>
+            <text>]</text>
+        </token>
+        <token id='T_PUBLIC' start='1493' end='1499'>
+            <text>public</text>
+        </token>
+        <token id='T_FUNCTION' start='1500' end='1508'>
+            <text>function</text>
+        </token>
+        <token id='T_STRING' start='1509' end='1515'>
+            <text>method</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='1515' end='1516'>
+            <text>(</text>
+        </token>
+        <token id='T_ATTRIBUTE' start='1516' end='1518'>
+            <text>#[</text>
+        </token>
+        <token id='T_STRING' start='1518' end='1524'>
+            <text>Trait1</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='1524' end='1525'>
+            <text>(</text>
+        </token>
+        <token id='T_LNUMBER' start='1525' end='1526'>
+            <text>5</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='1526' end='1527'>
+            <text>)</text>
+        </token>
+        <token id='T_CLOSE_RECT' start='1527' end='1528'>
+            <text>]</text>
+        </token>
+        <token id='T_VARIABLE' start='1529' end='1536'>
+            <text>$param1</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='1536' end='1537'>
+            <text>)</text>
+        </token>
+        <token id='T_CURLY_OPEN' start='1538' end='1539'>
+            <text>{</text>
+        </token>
+        <token id='T_CURLY_CLOSE' start='1539' end='1540'>
+            <text>}</text>
+        </token>
+        <token id='T_ATTRIBUTE' start='1546' end='1548'>
+            <text>#[</text>
+        </token>
+        <token id='T_STRING' start='1548' end='1554'>
+            <text>Trait1</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='1554' end='1555'>
+            <text>(</text>
+        </token>
+        <token id='T_LNUMBER' start='1555' end='1556'>
+            <text>6</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='1556' end='1557'>
+            <text>)</text>
+        </token>
+        <token id='T_CLOSE_RECT' start='1557' end='1558'>
+            <text>]</text>
+        </token>
+        <token id='T_ATTRIBUTE' start='1563' end='1565'>
+            <text>#[</text>
+        </token>
+        <token id='T_STRING' start='1565' end='1571'>
+            <text>Trait2</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='1571' end='1572'>
+            <text>(</text>
+        </token>
+        <token id='T_LNUMBER' start='1572' end='1573'>
+            <text>6</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='1573' end='1574'>
+            <text>)</text>
+        </token>
+        <token id='T_CLOSE_RECT' start='1574' end='1575'>
+            <text>]</text>
+        </token>
+        <token id='T_PUBLIC' start='1580' end='1586'>
+            <text>public</text>
+        </token>
+        <token id='T_STATIC' start='1587' end='1593'>
+            <text>static</text>
+        </token>
+        <token id='T_FUNCTION' start='1594' end='1602'>
+            <text>function</text>
+        </token>
+        <token id='T_STRING' start='1603' end='1615'>
+            <text>staticMethod</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='1615' end='1616'>
+            <text>(</text>
+        </token>
+        <token id='T_ATTRIBUTE' start='1616' end='1618'>
+            <text>#[</text>
+        </token>
+        <token id='T_STRING' start='1618' end='1624'>
+            <text>Trait1</text>
+        </token>
+        <token id='T_CLOSE_RECT' start='1624' end='1625'>
+            <text>]</text>
+        </token>
+        <token id='T_STRING' start='1626' end='1629'>
+            <text>int</text>
+        </token>
+        <token id='T_OR' start='1629' end='1630'>
+            <text>|</text>
+        </token>
+        <token id='T_STRING' start='1630' end='1636'>
+            <text>string</text>
+        </token>
+        <token id='T_VARIABLE' start='1637' end='1644'>
+            <text>$param1</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='1644' end='1645'>
+            <text>)</text>
+        </token>
+        <token id='T_NEKUDOTAIM' start='1645' end='1646'>
+            <text>:</text>
+        </token>
+        <token id='T_STRING' start='1647' end='1651'>
+            <text>bool</text>
+        </token>
+        <token id='T_OR' start='1651' end='1652'>
+            <text>|</text>
+        </token>
+        <token id='T_STRING' start='1652' end='1655'>
+            <text>int</text>
+        </token>
+        <token id='T_CURLY_OPEN' start='1656' end='1657'>
+            <text>{</text>
+        </token>
+        <token id='T_RETURN' start='1666' end='1672'>
+            <text>return</text>
+        </token>
+        <token id='T_STRING' start='1673' end='1678'>
+            <text>false</text>
+        </token>
+        <token id='T_SEMICOLON' start='1678' end='1679'>
+            <text>;</text>
+        </token>
+        <token id='T_CURLY_CLOSE' start='1684' end='1685'>
+            <text>}</text>
+        </token>
+        <token id='T_CURLY_CLOSE' start='1686' end='1687'>
+            <text>}</text>
+        </token>
+        <token id='T_VARIABLE' start='1689' end='1694'>
+            <text>$anon</text>
+        </token>
+        <token id='T_EQUAL' start='1695' end='1696'>
+            <text>=</text>
+        </token>
+        <token id='T_NEW' start='1697' end='1700'>
+            <text>new</text>
+        </token>
+        <token id='T_ATTRIBUTE' start='1701' end='1703'>
+            <text>#[</text>
+        </token>
+        <token id='T_STRING' start='1703' end='1708'>
+            <text>Anon1</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='1708' end='1709'>
+            <text>(</text>
+        </token>
+        <token id='T_LNUMBER' start='1709' end='1710'>
+            <text>1</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='1710' end='1711'>
+            <text>)</text>
+        </token>
+        <token id='T_CLOSE_RECT' start='1711' end='1712'>
+            <text>]</text>
+        </token>
+        <token id='T_CLASS' start='1713' end='1718'>
+            <text>class</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='1719' end='1720'>
+            <text>(</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='1720' end='1721'>
+            <text>)</text>
+        </token>
+        <token id='T_CURLY_OPEN' start='1722' end='1723'>
+            <text>{</text>
+        </token>
+        <token id='T_CURLY_CLOSE' start='1723' end='1724'>
+            <text>}</text>
+        </token>
+        <token id='T_SEMICOLON' start='1724' end='1725'>
+            <text>;</text>
+        </token>
+        <token id='T_VARIABLE' start='1727' end='1733'>
+            <text>$anon2</text>
+        </token>
+        <token id='T_EQUAL' start='1734' end='1735'>
+            <text>=</text>
+        </token>
+        <token id='T_NEW' start='1736' end='1739'>
+            <text>new</text>
+        </token>
+        <token id='T_ATTRIBUTE' start='1740' end='1742'>
+            <text>#[</text>
+        </token>
+        <token id='T_STRING' start='1742' end='1747'>
+            <text>Anon2</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='1747' end='1748'>
+            <text>(</text>
+        </token>
+        <token id='T_LNUMBER' start='1748' end='1749'>
+            <text>1</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='1749' end='1750'>
+            <text>)</text>
+        </token>
+        <token id='T_CLOSE_RECT' start='1750' end='1751'>
+            <text>]</text>
+        </token>
+        <token id='T_CLASS' start='1752' end='1757'>
+            <text>class</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='1758' end='1759'>
+            <text>(</text>
+        </token>
+        <token id='T_VARIABLE' start='1759' end='1764'>
+            <text>$test</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='1764' end='1765'>
+            <text>)</text>
+        </token>
+        <token id='T_CURLY_OPEN' start='1766' end='1767'>
+            <text>{</text>
+        </token>
+        <token id='T_ATTRIBUTE' start='1772' end='1774'>
+            <text>#[</text>
+        </token>
+        <token id='T_STRING' start='1774' end='1779'>
+            <text>Anon2</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='1779' end='1780'>
+            <text>(</text>
+        </token>
+        <token id='T_LNUMBER' start='1780' end='1781'>
+            <text>2</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='1781' end='1782'>
+            <text>)</text>
+        </token>
+        <token id='T_CLOSE_RECT' start='1782' end='1783'>
+            <text>]</text>
+        </token>
+        <token id='T_PUBLIC' start='1788' end='1794'>
+            <text>public</text>
+        </token>
+        <token id='T_CONST' start='1795' end='1800'>
+            <text>const</text>
+        </token>
+        <token id='T_STRING' start='1801' end='1809'>
+            <text>CONSTANT</text>
+        </token>
+        <token id='T_EQUAL' start='1810' end='1811'>
+            <text>=</text>
+        </token>
+        <token id='T_CONSTANT_ENCAPSED_STRING' start='1812' end='1822'>
+            <text>&apos;constant&apos;</text>
+        </token>
+        <token id='T_SEMICOLON' start='1822' end='1823'>
+            <text>;</text>
+        </token>
+        <token id='T_ATTRIBUTE' start='1829' end='1831'>
+            <text>#[</text>
+        </token>
+        <token id='T_STRING' start='1831' end='1836'>
+            <text>Anon2</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='1836' end='1837'>
+            <text>(</text>
+        </token>
+        <token id='T_LNUMBER' start='1837' end='1838'>
+            <text>3</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='1838' end='1839'>
+            <text>)</text>
+        </token>
+        <token id='T_CLOSE_RECT' start='1839' end='1840'>
+            <text>]</text>
+        </token>
+        <token id='T_PUBLIC' start='1845' end='1851'>
+            <text>public</text>
+        </token>
+        <token id='T_STRING' start='1852' end='1858'>
+            <text>string</text>
+        </token>
+        <token id='T_VARIABLE' start='1859' end='1865'>
+            <text>$field</text>
+        </token>
+        <token id='T_EQUAL' start='1866' end='1867'>
+            <text>=</text>
+        </token>
+        <token id='T_CONSTANT_ENCAPSED_STRING' start='1868' end='1874'>
+            <text>&apos;test&apos;</text>
+        </token>
+        <token id='T_SEMICOLON' start='1874' end='1875'>
+            <text>;</text>
+        </token>
+        <token id='T_ATTRIBUTE' start='1881' end='1883'>
+            <text>#[</text>
+        </token>
+        <token id='T_STRING' start='1883' end='1888'>
+            <text>Anon2</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='1888' end='1889'>
+            <text>(</text>
+        </token>
+        <token id='T_LNUMBER' start='1889' end='1890'>
+            <text>4</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='1890' end='1891'>
+            <text>)</text>
+        </token>
+        <token id='T_CLOSE_RECT' start='1891' end='1892'>
+            <text>]</text>
+        </token>
+        <token id='T_PUBLIC' start='1897' end='1903'>
+            <text>public</text>
+        </token>
+        <token id='T_STATIC' start='1904' end='1910'>
+            <text>static</text>
+        </token>
+        <token id='T_STRING' start='1911' end='1914'>
+            <text>int</text>
+        </token>
+        <token id='T_VARIABLE' start='1915' end='1927'>
+            <text>$staticField</text>
+        </token>
+        <token id='T_EQUAL' start='1928' end='1929'>
+            <text>=</text>
+        </token>
+        <token id='T_LNUMBER' start='1930' end='1931'>
+            <text>1</text>
+        </token>
+        <token id='T_SEMICOLON' start='1931' end='1932'>
+            <text>;</text>
+        </token>
+        <token id='T_ATTRIBUTE' start='1938' end='1940'>
+            <text>#[</text>
+        </token>
+        <token id='T_STRING' start='1940' end='1945'>
+            <text>Anon2</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='1945' end='1946'>
+            <text>(</text>
+        </token>
+        <token id='T_LNUMBER' start='1946' end='1947'>
+            <text>5</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='1947' end='1948'>
+            <text>)</text>
+        </token>
+        <token id='T_CLOSE_RECT' start='1948' end='1949'>
+            <text>]</text>
+        </token>
+        <token id='T_PUBLIC' start='1954' end='1960'>
+            <text>public</text>
+        </token>
+        <token id='T_FUNCTION' start='1961' end='1969'>
+            <text>function</text>
+        </token>
+        <token id='T_STRING' start='1970' end='1981'>
+            <text>__construct</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='1981' end='1982'>
+            <text>(</text>
+        </token>
+        <token id='T_ATTRIBUTE' start='1982' end='1984'>
+            <text>#[</text>
+        </token>
+        <token id='T_STRING' start='1984' end='1989'>
+            <text>Anon2</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='1989' end='1990'>
+            <text>(</text>
+        </token>
+        <token id='T_LNUMBER' start='1990' end='1991'>
+            <text>6</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='1991' end='1992'>
+            <text>)</text>
+        </token>
+        <token id='T_CLOSE_RECT' start='1992' end='1993'>
+            <text>]</text>
+        </token>
+        <token id='T_VARIABLE' start='1994' end='2001'>
+            <text>$param1</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='2001' end='2002'>
+            <text>)</text>
+        </token>
+        <token id='T_CURLY_OPEN' start='2003' end='2004'>
+            <text>{</text>
+        </token>
+        <token id='T_CURLY_CLOSE' start='2009' end='2010'>
+            <text>}</text>
+        </token>
+        <token id='T_ATTRIBUTE' start='2016' end='2018'>
+            <text>#[</text>
+        </token>
+        <token id='T_STRING' start='2018' end='2023'>
+            <text>Anon2</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='2023' end='2024'>
+            <text>(</text>
+        </token>
+        <token id='T_LNUMBER' start='2024' end='2025'>
+            <text>7</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='2025' end='2026'>
+            <text>)</text>
+        </token>
+        <token id='T_CLOSE_RECT' start='2026' end='2027'>
+            <text>]</text>
+        </token>
+        <token id='T_PUBLIC' start='2032' end='2038'>
+            <text>public</text>
+        </token>
+        <token id='T_FUNCTION' start='2039' end='2047'>
+            <text>function</text>
+        </token>
+        <token id='T_STRING' start='2048' end='2054'>
+            <text>method</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='2054' end='2055'>
+            <text>(</text>
+        </token>
+        <token id='T_ATTRIBUTE' start='2055' end='2057'>
+            <text>#[</text>
+        </token>
+        <token id='T_STRING' start='2057' end='2062'>
+            <text>Anon2</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='2062' end='2063'>
+            <text>(</text>
+        </token>
+        <token id='T_LNUMBER' start='2063' end='2064'>
+            <text>8</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='2064' end='2065'>
+            <text>)</text>
+        </token>
+        <token id='T_CLOSE_RECT' start='2065' end='2066'>
+            <text>]</text>
+        </token>
+        <token id='T_VARIABLE' start='2067' end='2074'>
+            <text>$param1</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='2074' end='2075'>
+            <text>)</text>
+        </token>
+        <token id='T_NEKUDOTAIM' start='2075' end='2076'>
+            <text>:</text>
+        </token>
+        <token id='T_STRING' start='2077' end='2080'>
+            <text>int</text>
+        </token>
+        <token id='T_OR' start='2080' end='2081'>
+            <text>|</text>
+        </token>
+        <token id='T_STRING' start='2081' end='2087'>
+            <text>string</text>
+        </token>
+        <token id='T_CURLY_OPEN' start='2088' end='2089'>
+            <text>{</text>
+        </token>
+        <token id='T_RETURN' start='2098' end='2104'>
+            <text>return</text>
+        </token>
+        <token id='T_LNUMBER' start='2105' end='2106'>
+            <text>1</text>
+        </token>
+        <token id='T_SEMICOLON' start='2106' end='2107'>
+            <text>;</text>
+        </token>
+        <token id='T_CURLY_CLOSE' start='2112' end='2113'>
+            <text>}</text>
+        </token>
+        <token id='T_ATTRIBUTE' start='2119' end='2121'>
+            <text>#[</text>
+        </token>
+        <token id='T_STRING' start='2121' end='2126'>
+            <text>Anon2</text>
+        </token>
+        <token id='T_CLOSE_RECT' start='2126' end='2127'>
+            <text>]</text>
+        </token>
+        <token id='T_PRIVATE' start='2132' end='2139'>
+            <text>private</text>
+        </token>
+        <token id='T_STATIC' start='2140' end='2146'>
+            <text>static</text>
+        </token>
+        <token id='T_FUNCTION' start='2147' end='2155'>
+            <text>function</text>
+        </token>
+        <token id='T_STRING' start='2156' end='2168'>
+            <text>staticMethod</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='2168' end='2169'>
+            <text>(</text>
+        </token>
+        <token id='T_ATTRIBUTE' start='2169' end='2171'>
+            <text>#[</text>
+        </token>
+        <token id='T_STRING' start='2171' end='2176'>
+            <text>Anon2</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='2176' end='2177'>
+            <text>(</text>
+        </token>
+        <token id='T_LNUMBER' start='2177' end='2178'>
+            <text>9</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='2178' end='2179'>
+            <text>)</text>
+        </token>
+        <token id='T_CLOSE_RECT' start='2179' end='2180'>
+            <text>]</text>
+        </token>
+        <token id='T_STRING' start='2181' end='2184'>
+            <text>int</text>
+        </token>
+        <token id='T_OR' start='2184' end='2185'>
+            <text>|</text>
+        </token>
+        <token id='T_STRING' start='2185' end='2189'>
+            <text>bool</text>
+        </token>
+        <token id='T_VARIABLE' start='2190' end='2196'>
+            <text>$pram1</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='2196' end='2197'>
+            <text>)</text>
+        </token>
+        <token id='T_NEKUDOTAIM' start='2197' end='2198'>
+            <text>:</text>
+        </token>
+        <token id='T_STRING' start='2199' end='2202'>
+            <text>int</text>
+        </token>
+        <token id='T_OR' start='2202' end='2203'>
+            <text>|</text>
+        </token>
+        <token id='T_STRING' start='2203' end='2209'>
+            <text>string</text>
+        </token>
+        <token id='T_CURLY_OPEN' start='2210' end='2211'>
+            <text>{</text>
+        </token>
+        <token id='T_RETURN' start='2220' end='2226'>
+            <text>return</text>
+        </token>
+        <token id='T_LNUMBER' start='2227' end='2228'>
+            <text>1</text>
+        </token>
+        <token id='T_SEMICOLON' start='2228' end='2229'>
+            <text>;</text>
+        </token>
+        <token id='T_CURLY_CLOSE' start='2234' end='2235'>
+            <text>}</text>
+        </token>
+        <token id='T_CURLY_CLOSE' start='2236' end='2237'>
+            <text>}</text>
+        </token>
+        <token id='T_SEMICOLON' start='2237' end='2238'>
+            <text>;</text>
+        </token>
+        <token id='T_ATTRIBUTE' start='2240' end='2242'>
+            <text>#[</text>
+        </token>
+        <token id='T_STRING' start='2242' end='2247'>
+            <text>Func1</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='2247' end='2248'>
+            <text>(</text>
+        </token>
+        <token id='T_LNUMBER' start='2248' end='2249'>
+            <text>1</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='2249' end='2250'>
+            <text>)</text>
+        </token>
+        <token id='T_CLOSE_RECT' start='2250' end='2251'>
+            <text>]</text>
+        </token>
+        <token id='T_FUNCTION' start='2252' end='2260'>
+            <text>function</text>
+        </token>
+        <token id='T_STRING' start='2261' end='2266'>
+            <text>func1</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='2266' end='2267'>
+            <text>(</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='2267' end='2268'>
+            <text>)</text>
+        </token>
+        <token id='T_CURLY_OPEN' start='2269' end='2270'>
+            <text>{</text>
+        </token>
+        <token id='T_CURLY_CLOSE' start='2270' end='2271'>
+            <text>}</text>
+        </token>
+        <token id='T_ATTRIBUTE' start='2273' end='2275'>
+            <text>#[</text>
+        </token>
+        <token id='T_STRING' start='2275' end='2280'>
+            <text>Func2</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='2280' end='2281'>
+            <text>(</text>
+        </token>
+        <token id='T_LNUMBER' start='2281' end='2282'>
+            <text>1</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='2282' end='2283'>
+            <text>)</text>
+        </token>
+        <token id='T_CLOSE_RECT' start='2283' end='2284'>
+            <text>]</text>
+        </token>
+        <token id='T_FUNCTION' start='2285' end='2293'>
+            <text>function</text>
+        </token>
+        <token id='T_STRING' start='2294' end='2299'>
+            <text>func2</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='2299' end='2300'>
+            <text>(</text>
+        </token>
+        <token id='T_ATTRIBUTE' start='2300' end='2302'>
+            <text>#[</text>
+        </token>
+        <token id='T_STRING' start='2302' end='2307'>
+            <text>Func2</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='2307' end='2308'>
+            <text>(</text>
+        </token>
+        <token id='T_LNUMBER' start='2308' end='2309'>
+            <text>2</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='2309' end='2310'>
+            <text>)</text>
+        </token>
+        <token id='T_CLOSE_RECT' start='2310' end='2311'>
+            <text>]</text>
+        </token>
+        <token id='T_STRING' start='2312' end='2315'>
+            <text>int</text>
+        </token>
+        <token id='T_OR' start='2315' end='2316'>
+            <text>|</text>
+        </token>
+        <token id='T_STRING' start='2316' end='2322'>
+            <text>string</text>
+        </token>
+        <token id='T_VARIABLE' start='2323' end='2329'>
+            <text>$param</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='2329' end='2330'>
+            <text>)</text>
+        </token>
+        <token id='T_NEKUDOTAIM' start='2330' end='2331'>
+            <text>:</text>
+        </token>
+        <token id='T_STRING' start='2332' end='2336'>
+            <text>void</text>
+        </token>
+        <token id='T_CURLY_OPEN' start='2337' end='2338'>
+            <text>{</text>
+        </token>
+        <token id='T_CURLY_CLOSE' start='2338' end='2339'>
+            <text>}</text>
+        </token>
+        <token id='T_VARIABLE' start='2341' end='2349'>
+            <text>$labmda1</text>
+        </token>
+        <token id='T_EQUAL' start='2350' end='2351'>
+            <text>=</text>
+        </token>
+        <token id='T_ATTRIBUTE' start='2352' end='2354'>
+            <text>#[</text>
+        </token>
+        <token id='T_STRING' start='2354' end='2361'>
+            <text>Lambda1</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='2361' end='2362'>
+            <text>(</text>
+        </token>
+        <token id='T_LNUMBER' start='2362' end='2363'>
+            <text>1</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='2363' end='2364'>
+            <text>)</text>
+        </token>
+        <token id='T_CLOSE_RECT' start='2364' end='2365'>
+            <text>]</text>
+        </token>
+        <token id='T_FUNCTION' start='2366' end='2374'>
+            <text>function</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='2374' end='2375'>
+            <text>(</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='2375' end='2376'>
+            <text>)</text>
+        </token>
+        <token id='T_CURLY_OPEN' start='2377' end='2378'>
+            <text>{</text>
+        </token>
+        <token id='T_CURLY_CLOSE' start='2378' end='2379'>
+            <text>}</text>
+        </token>
+        <token id='T_SEMICOLON' start='2379' end='2380'>
+            <text>;</text>
+        </token>
+        <token id='T_VARIABLE' start='2381' end='2389'>
+            <text>$labmda2</text>
+        </token>
+        <token id='T_EQUAL' start='2390' end='2391'>
+            <text>=</text>
+        </token>
+        <token id='T_ATTRIBUTE' start='2392' end='2394'>
+            <text>#[</text>
+        </token>
+        <token id='T_STRING' start='2394' end='2401'>
+            <text>Lambda2</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='2401' end='2402'>
+            <text>(</text>
+        </token>
+        <token id='T_LNUMBER' start='2402' end='2403'>
+            <text>1</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='2403' end='2404'>
+            <text>)</text>
+        </token>
+        <token id='T_CLOSE_RECT' start='2404' end='2405'>
+            <text>]</text>
+        </token>
+        <token id='T_ATTRIBUTE' start='2406' end='2408'>
+            <text>#[</text>
+        </token>
+        <token id='T_STRING' start='2408' end='2415'>
+            <text>Lambda3</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='2415' end='2416'>
+            <text>(</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='2416' end='2417'>
+            <text>)</text>
+        </token>
+        <token id='T_CLOSE_RECT' start='2417' end='2418'>
+            <text>]</text>
+        </token>
+        <token id='T_FUNCTION' start='2419' end='2427'>
+            <text>function</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='2427' end='2428'>
+            <text>(</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='2428' end='2429'>
+            <text>)</text>
+        </token>
+        <token id='T_NEKUDOTAIM' start='2429' end='2430'>
+            <text>:</text>
+        </token>
+        <token id='T_STRING' start='2431' end='2435'>
+            <text>void</text>
+        </token>
+        <token id='T_CURLY_OPEN' start='2436' end='2437'>
+            <text>{</text>
+        </token>
+        <token id='T_CURLY_CLOSE' start='2437' end='2438'>
+            <text>}</text>
+        </token>
+        <token id='T_SEMICOLON' start='2438' end='2439'>
+            <text>;</text>
+        </token>
+        <token id='T_VARIABLE' start='2441' end='2448'>
+            <text>$arrow1</text>
+        </token>
+        <token id='T_EQUAL' start='2449' end='2450'>
+            <text>=</text>
+        </token>
+        <token id='T_ATTRIBUTE' start='2451' end='2453'>
+            <text>#[</text>
+        </token>
+        <token id='T_STRING' start='2453' end='2459'>
+            <text>Arrow1</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='2459' end='2460'>
+            <text>(</text>
+        </token>
+        <token id='T_LNUMBER' start='2460' end='2461'>
+            <text>1</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='2461' end='2462'>
+            <text>)</text>
+        </token>
+        <token id='T_CLOSE_RECT' start='2462' end='2463'>
+            <text>]</text>
+        </token>
+        <token id='T_FN' start='2464' end='2466'>
+            <text>fn</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='2466' end='2467'>
+            <text>(</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='2467' end='2468'>
+            <text>)</text>
+        </token>
+        <token id='T_DOUBLE_ARROW' start='2469' end='2471'>
+            <text>=&gt;</text>
+        </token>
+        <token id='T_LNUMBER' start='2472' end='2475'>
+            <text>100</text>
+        </token>
+        <token id='T_SEMICOLON' start='2475' end='2476'>
+            <text>;</text>
+        </token>
+        <token id='T_VARIABLE' start='2477' end='2484'>
+            <text>$arrow2</text>
+        </token>
+        <token id='T_EQUAL' start='2485' end='2486'>
+            <text>=</text>
+        </token>
+        <token id='T_ATTRIBUTE' start='2487' end='2489'>
+            <text>#[</text>
+        </token>
+        <token id='T_STRING' start='2489' end='2495'>
+            <text>Arrow2</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='2495' end='2496'>
+            <text>(</text>
+        </token>
+        <token id='T_LNUMBER' start='2496' end='2497'>
+            <text>1</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='2497' end='2498'>
+            <text>)</text>
+        </token>
+        <token id='T_COMMA' start='2498' end='2499'>
+            <text>,</text>
+        </token>
+        <token id='T_STRING' start='2500' end='2506'>
+            <text>Arrow2</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='2506' end='2507'>
+            <text>(</text>
+        </token>
+        <token id='T_LNUMBER' start='2507' end='2508'>
+            <text>2</text>
+        </token>
+        <token id='T_COMMA' start='2508' end='2509'>
+            <text>,</text>
+        </token>
+        <token id='T_CONSTANT_ENCAPSED_STRING' start='2510' end='2516'>
+            <text>"test"</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='2516' end='2517'>
+            <text>)</text>
+        </token>
+        <token id='T_CLOSE_RECT' start='2517' end='2518'>
+            <text>]</text>
+        </token>
+        <token id='T_FN' start='2519' end='2521'>
+            <text>fn</text>
+        </token>
+        <token id='T_OPEN_PARENTHESE' start='2521' end='2522'>
+            <text>(</text>
+        </token>
+        <token id='T_CLOSE_PARENTHESE' start='2522' end='2523'>
+            <text>)</text>
+        </token>
+        <token id='T_NEKUDOTAIM' start='2523' end='2524'>
+            <text>:</text>
+        </token>
+        <token id='T_STRING' start='2525' end='2528'>
+            <text>int</text>
+        </token>
+        <token id='T_OR' start='2528' end='2529'>
+            <text>|</text>
+        </token>
+        <token id='T_STRING' start='2529' end='2535'>
+            <text>string</text>
+        </token>
+        <token id='T_DOUBLE_ARROW' start='2536' end='2538'>
+            <text>=&gt;</text>
+        </token>
+        <token id='T_LNUMBER' start='2539' end='2542'>
+            <text>100</text>
+        </token>
+        <token id='T_SEMICOLON' start='2542' end='2543'>
+            <text>;</text>
+        </token>
+        <token id='EOF' start='2544' end='2544'>
+            <text></text>
+        </token>
+    </scanner>
+    <Program start='0' end='2544'>
+        <Comments>
+            <Comment start='6' end='813' commentType='multiLine'/>
+            <Comment start='992' end='1001' commentType='singleLine'/>
+            <Comment start='6' end='813' commentType='multiLine'/>
+            <Comment start='992' end='1001' commentType='singleLine'/>
+        </Comments>
+        <Statements>
+            <AttributedStatement start='815' end='1272'>
+                <Attributes>
+                    <Attribute start='815' end='827'>
+                        <AttributeDeclarations>
+                            <AttributeDeclaration start='817' end='826'>
+                                <AttributeName>
+                                    <NamespaceName start='817' end='823' isCurrent='false' isGlobal='false'>
+                                        <Identifier start='817' end='823' name='Class1'/>
+                                    </NamespaceName>
+                                </AttributeName>
+                                <AttributeParameters>
+                                    <Scalar start='824' end='825' type='INT' value='1'/>
+                                </AttributeParameters>
+                            </AttributeDeclaration>
+                        </AttributeDeclarations>
+                    </Attribute>
+                </Attributes>
+                <ClassDeclaration start='828' end='1272' modifier='NONE'>
+                    <ClassName>
+                        <Identifier start='834' end='849' name='AttributeSyntax'/>
+                    </ClassName>
+                    <SuperClassName>
+                    </SuperClassName>
+                    <Interfaces>
+                    </Interfaces>
+                    <Block start='850' end='1272' isCurly='true'>
+                        <AttributedStatement start='856' end='925'>
+                            <Attributes>
+                                <Attribute start='856' end='868'>
+                                    <AttributeDeclarations>
+                                        <AttributeDeclaration start='858' end='867'>
+                                            <AttributeName>
+                                                <NamespaceName start='858' end='864' isCurrent='false' isGlobal='false'>
+                                                    <Identifier start='858' end='864' name='Class1'/>
+                                                </NamespaceName>
+                                            </AttributeName>
+                                            <AttributeParameters>
+                                                <Scalar start='865' end='866' type='INT' value='2'/>
+                                            </AttributeParameters>
+                                        </AttributeDeclaration>
+                                    </AttributeDeclarations>
+                                </Attribute>
+                                <Attribute start='873' end='885'>
+                                    <AttributeDeclarations>
+                                        <AttributeDeclaration start='875' end='884'>
+                                            <AttributeName>
+                                                <NamespaceName start='875' end='881' isCurrent='false' isGlobal='false'>
+                                                    <Identifier start='875' end='881' name='Class2'/>
+                                                </NamespaceName>
+                                            </AttributeName>
+                                            <AttributeParameters>
+                                                <Scalar start='882' end='883' type='INT' value='2'/>
+                                            </AttributeParameters>
+                                        </AttributeDeclaration>
+                                    </AttributeDeclarations>
+                                </Attribute>
+                            </Attributes>
+                            <ClassConstantDeclaration start='890' end='925' modifier='public'>
+                                <Names>
+                                    <Identifier start='903' end='911' name='CONSTANT'/>
+                                </Names>
+                                <Initializers>
+                                    <Scalar start='914' end='924' type='STRING' value='&apos;constant&apos;'/>
+                                </Initializers>
+                            </ClassConstantDeclaration>
+                        </AttributedStatement>
+                        <AttributedStatement start='931' end='962'>
+                            <Attributes>
+                                <Attribute start='931' end='943'>
+                                    <AttributeDeclarations>
+                                        <AttributeDeclaration start='933' end='942'>
+                                            <AttributeName>
+                                                <NamespaceName start='933' end='939' isCurrent='false' isGlobal='false'>
+                                                    <Identifier start='933' end='939' name='Class1'/>
+                                                </NamespaceName>
+                                            </AttributeName>
+                                            <AttributeParameters>
+                                                <Scalar start='940' end='941' type='INT' value='3'/>
+                                            </AttributeParameters>
+                                        </AttributeDeclaration>
+                                    </AttributeDeclarations>
+                                </Attribute>
+                            </Attributes>
+                            <FieldsDeclaration start='948' end='962' modifier='public'>
+                                <FieldType>
+                                </FieldType>
+                                <VariableNames>
+                                    <Variable start='955' end='961' isDollared='true'>
+                                        <Identifier start='956' end='961' name='field'/>
+                                    </Variable>
+                                </VariableNames>
+                                <InitialValues>
+                                </InitialValues>
+                            </FieldsDeclaration>
+                        </AttributedStatement>
+                        <AttributedStatement start='968' end='1025'>
+                            <Attributes>
+                                <Attribute start='968' end='991'>
+                                    <AttributeDeclarations>
+                                        <AttributeDeclaration start='970' end='979'>
+                                            <AttributeName>
+                                                <NamespaceName start='970' end='976' isCurrent='false' isGlobal='false'>
+                                                    <Identifier start='970' end='976' name='Class1'/>
+                                                </NamespaceName>
+                                            </AttributeName>
+                                            <AttributeParameters>
+                                                <Scalar start='977' end='978' type='INT' value='4'/>
+                                            </AttributeParameters>
+                                        </AttributeDeclaration>
+                                        <AttributeDeclaration start='981' end='990'>
+                                            <AttributeName>
+                                                <NamespaceName start='981' end='987' isCurrent='false' isGlobal='false'>
+                                                    <Identifier start='981' end='987' name='Class2'/>
+                                                </NamespaceName>
+                                            </AttributeName>
+                                            <AttributeParameters>
+                                                <Scalar start='988' end='989' type='INT' value='4'/>
+                                            </AttributeParameters>
+                                        </AttributeDeclaration>
+                                    </AttributeDeclarations>
+                                </Attribute>
+                            </Attributes>
+                            <FieldsDeclaration start='1005' end='1025' modifier='public'>
+                                <FieldType>
+                                </FieldType>
+                                <VariableNames>
+                                    <Variable start='1012' end='1024' isDollared='true'>
+                                        <Identifier start='1013' end='1024' name='staticField'/>
+                                    </Variable>
+                                </VariableNames>
+                                <InitialValues>
+                                </InitialValues>
+                            </FieldsDeclaration>
+                        </AttributedStatement>
+                        <AttributedStatement start='1031' end='1134'>
+                            <Attributes>
+                                <Attribute start='1031' end='1043'>
+                                    <AttributeDeclarations>
+                                        <AttributeDeclaration start='1033' end='1042'>
+                                            <AttributeName>
+                                                <NamespaceName start='1033' end='1039' isCurrent='false' isGlobal='false'>
+                                                    <Identifier start='1033' end='1039' name='Class1'/>
+                                                </NamespaceName>
+                                            </AttributeName>
+                                            <AttributeParameters>
+                                                <Scalar start='1040' end='1041' type='INT' value='5'/>
+                                            </AttributeParameters>
+                                        </AttributeDeclaration>
+                                    </AttributeDeclarations>
+                                </Attribute>
+                            </Attributes>
+                            <MethodDeclaration start='1048' end='1134' modifiers='public'>
+                                <FunctionDeclaration start='1055' end='1134' isReference='false'>
+                                    <Identifier start='1064' end='1070' name='method'/>
+                                    <FormalParameters>
+                                        <FormalParameter start='1071' end='1091' isMandatory='true' isVariadic='false'>
+                                            <Attributes>
+                                                <Attribute start='1071' end='1083'>
+                                                    <AttributeDeclarations>
+                                                        <AttributeDeclaration start='1073' end='1082'>
+                                                            <AttributeName>
+                                                                <NamespaceName start='1073' end='1079' isCurrent='false' isGlobal='false'>
+                                                                    <Identifier start='1073' end='1079' name='Class1'/>
+                                                                </NamespaceName>
+                                                            </AttributeName>
+                                                            <AttributeParameters>
+                                                                <Scalar start='1080' end='1081' type='INT' value='6'/>
+                                                            </AttributeParameters>
+                                                        </AttributeDeclaration>
+                                                    </AttributeDeclarations>
+                                                </Attribute>
+                                            </Attributes>
+                                            <ParametrType>
+                                            </ParametrType>
+                                            <ParametrName>
+                                                <Variable start='1084' end='1091' isDollared='true'>
+                                                    <Identifier start='1085' end='1091' name='param1'/>
+                                                </Variable>
+                                            </ParametrName>
+                                            <DefaultValue>
+                                            </DefaultValue>
+                                        </FormalParameter>
+                                        <FormalParameter start='1093' end='1130' isMandatory='true' isVariadic='false'>
+                                            <Attributes>
+                                                <Attribute start='1093' end='1119'>
+                                                    <AttributeDeclarations>
+                                                        <AttributeDeclaration start='1095' end='1118'>
+                                                            <AttributeName>
+                                                                <NamespaceName start='1095' end='1101' isCurrent='false' isGlobal='false'>
+                                                                    <Identifier start='1095' end='1101' name='Class1'/>
+                                                                </NamespaceName>
+                                                            </AttributeName>
+                                                            <AttributeParameters>
+                                                                <Scalar start='1102' end='1107' type='STRING' value='&apos;foo&apos;'/>
+                                                                <Scalar start='1109' end='1114' type='STRING' value='&apos;bar&apos;'/>
+                                                                <Scalar start='1116' end='1117' type='INT' value='7'/>
+                                                            </AttributeParameters>
+                                                        </AttributeDeclaration>
+                                                    </AttributeDeclarations>
+                                                </Attribute>
+                                            </Attributes>
+                                            <ParametrType>
+                                                <NamespaceName start='1120' end='1123' isCurrent='false' isGlobal='false'>
+                                                    <Identifier start='1120' end='1123' name='int'/>
+                                                </NamespaceName>
+                                            </ParametrType>
+                                            <ParametrName>
+                                                <Variable start='1124' end='1130' isDollared='true'>
+                                                    <Identifier start='1125' end='1130' name='pram2'/>
+                                                </Variable>
+                                            </ParametrName>
+                                            <DefaultValue>
+                                            </DefaultValue>
+                                        </FormalParameter>
+                                    </FormalParameters>
+                                    <Block start='1132' end='1134' isCurly='true'>
+                                    </Block>
+                                </FunctionDeclaration>
+                            </MethodDeclaration>
+                        </AttributedStatement>
+                        <AttributedStatement start='1140' end='1270'>
+                            <Attributes>
+                                <Attribute start='1140' end='1152'>
+                                    <AttributeDeclarations>
+                                        <AttributeDeclaration start='1142' end='1151'>
+                                            <AttributeName>
+                                                <NamespaceName start='1142' end='1148' isCurrent='false' isGlobal='false'>
+                                                    <Identifier start='1142' end='1148' name='Class1'/>
+                                                </NamespaceName>
+                                            </AttributeName>
+                                            <AttributeParameters>
+                                                <Scalar start='1149' end='1150' type='INT' value='8'/>
+                                            </AttributeParameters>
+                                        </AttributeDeclaration>
+                                    </AttributeDeclarations>
+                                </Attribute>
+                            </Attributes>
+                            <MethodDeclaration start='1157' end='1270' modifiers='public static'>
+                                <FunctionDeclaration start='1171' end='1270' isReference='false'>
+                                    <Identifier start='1180' end='1192' name='staticMethod'/>
+                                    <FormalParameters>
+                                        <FormalParameter start='1193' end='1229' isMandatory='true' isVariadic='false'>
+                                            <Attributes>
+                                                <Attribute start='1193' end='1210'>
+                                                    <AttributeDeclarations>
+                                                        <AttributeDeclaration start='1195' end='1209'>
+                                                            <AttributeName>
+                                                                <NamespaceName start='1195' end='1206' isCurrent='false' isGlobal='false'>
+                                                                    <Identifier start='1195' end='1201' name='Class1'/>
+                                                                    <Identifier start='1202' end='1206' name='Test'/>
+                                                                </NamespaceName>
+                                                            </AttributeName>
+                                                            <AttributeParameters>
+                                                                <Scalar start='1207' end='1208' type='INT' value='9'/>
+                                                            </AttributeParameters>
+                                                        </AttributeDeclaration>
+                                                    </AttributeDeclarations>
+                                                </Attribute>
+                                            </Attributes>
+                                            <ParametrType>
+                                                <UnionType start='1211' end='1221'>
+                                                    <NamespaceName start='1211' end='1214' isCurrent='false' isGlobal='false'>
+                                                        <Identifier start='1211' end='1214' name='int'/>
+                                                    </NamespaceName>
+                                                    <NamespaceName start='1215' end='1221' isCurrent='false' isGlobal='false'>
+                                                        <Identifier start='1215' end='1221' name='string'/>
+                                                    </NamespaceName>
+                                                </UnionType>
+                                            </ParametrType>
+                                            <ParametrName>
+                                                <Variable start='1222' end='1229' isDollared='true'>
+                                                    <Identifier start='1223' end='1229' name='param1'/>
+                                                </Variable>
+                                            </ParametrName>
+                                            <DefaultValue>
+                                            </DefaultValue>
+                                        </FormalParameter>
+                                    </FormalParameters>
+                                    <UnionType start='1232' end='1240'>
+                                        <NamespaceName start='1232' end='1236' isCurrent='false' isGlobal='false'>
+                                            <Identifier start='1232' end='1236' name='bool'/>
+                                        </NamespaceName>
+                                        <NamespaceName start='1237' end='1240' isCurrent='false' isGlobal='false'>
+                                            <Identifier start='1237' end='1240' name='int'/>
+                                        </NamespaceName>
+                                    </UnionType>
+                                    <Block start='1241' end='1270' isCurly='true'>
+                                        <ReturnStatement start='1251' end='1264'>
+                                            <Scalar start='1258' end='1263' type='STRING' value='false'/>
+                                        </ReturnStatement>
+                                    </Block>
+                                </FunctionDeclaration>
+                            </MethodDeclaration>
+                        </AttributedStatement>
+                    </Block>
+                </ClassDeclaration>
+            </AttributedStatement>
+            <AttributedStatement start='1274' end='1346'>
+                <Attributes>
+                    <Attribute start='1274' end='1291'>
+                        <AttributeDeclarations>
+                            <AttributeDeclaration start='1276' end='1290'>
+                                <AttributeName>
+                                    <NamespaceName start='1276' end='1287' isCurrent='false' isGlobal='false'>
+                                        <Identifier start='1276' end='1287' name='ChildClass1'/>
+                                    </NamespaceName>
+                                </AttributeName>
+                                <AttributeParameters>
+                                    <Scalar start='1288' end='1289' type='INT' value='1'/>
+                                </AttributeParameters>
+                            </AttributeDeclaration>
+                        </AttributeDeclarations>
+                    </Attribute>
+                </Attributes>
+                <ClassDeclaration start='1292' end='1346' modifier='NONE'>
+                    <ClassName>
+                        <Identifier start='1298' end='1318' name='AttributeSyntaxChild'/>
+                    </ClassName>
+                    <SuperClassName>
+                        <NamespaceName start='1327' end='1342' isCurrent='false' isGlobal='false'>
+                            <Identifier start='1327' end='1342' name='AttributeSyntax'/>
+                        </NamespaceName>
+                    </SuperClassName>
+                    <Interfaces>
+                    </Interfaces>
+                    <Block start='1343' end='1346' isCurly='true'>
+                    </Block>
+                </ClassDeclaration>
+            </AttributedStatement>
+            <AttributedStatement start='1348' end='1687'>
+                <Attributes>
+                    <Attribute start='1348' end='1360'>
+                        <AttributeDeclarations>
+                            <AttributeDeclaration start='1350' end='1359'>
+                                <AttributeName>
+                                    <NamespaceName start='1350' end='1356' isCurrent='false' isGlobal='false'>
+                                        <Identifier start='1350' end='1356' name='Trait1'/>
+                                    </NamespaceName>
+                                </AttributeName>
+                                <AttributeParameters>
+                                    <Scalar start='1357' end='1358' type='INT' value='1'/>
+                                </AttributeParameters>
+                            </AttributeDeclaration>
+                        </AttributeDeclarations>
+                    </Attribute>
+                    <Attribute start='1361' end='1373'>
+                        <AttributeDeclarations>
+                            <AttributeDeclaration start='1363' end='1372'>
+                                <AttributeName>
+                                    <NamespaceName start='1363' end='1369' isCurrent='false' isGlobal='false'>
+                                        <Identifier start='1363' end='1369' name='Trait2'/>
+                                    </NamespaceName>
+                                </AttributeName>
+                                <AttributeParameters>
+                                    <Scalar start='1370' end='1371' type='INT' value='1'/>
+                                </AttributeParameters>
+                            </AttributeDeclaration>
+                        </AttributeDeclarations>
+                    </Attribute>
+                </Attributes>
+                <TraitDeclaration start='1374' end='1687'>
+                    <TraitName>
+                        <Identifier start='1380' end='1389' name='TestTrait'/>
+                    </TraitName>
+                    <Block start='1390' end='1687' isCurly='true'>
+                        <AttributedStatement start='1396' end='1427'>
+                            <Attributes>
+                                <Attribute start='1396' end='1408'>
+                                    <AttributeDeclarations>
+                                        <AttributeDeclaration start='1398' end='1407'>
+                                            <AttributeName>
+                                                <NamespaceName start='1398' end='1404' isCurrent='false' isGlobal='false'>
+                                                    <Identifier start='1398' end='1404' name='Trait1'/>
+                                                </NamespaceName>
+                                            </AttributeName>
+                                            <AttributeParameters>
+                                                <Scalar start='1405' end='1406' type='INT' value='2'/>
+                                            </AttributeParameters>
+                                        </AttributeDeclaration>
+                                    </AttributeDeclarations>
+                                </Attribute>
+                            </Attributes>
+                            <FieldsDeclaration start='1413' end='1427' modifier='public'>
+                                <FieldType>
+                                </FieldType>
+                                <VariableNames>
+                                    <Variable start='1420' end='1426' isDollared='true'>
+                                        <Identifier start='1421' end='1426' name='field'/>
+                                    </Variable>
+                                </VariableNames>
+                                <InitialValues>
+                                </InitialValues>
+                            </FieldsDeclaration>
+                        </AttributedStatement>
+                        <AttributedStatement start='1433' end='1470'>
+                            <Attributes>
+                                <Attribute start='1433' end='1445'>
+                                    <AttributeDeclarations>
+                                        <AttributeDeclaration start='1435' end='1444'>
+                                            <AttributeName>
+                                                <NamespaceName start='1435' end='1441' isCurrent='false' isGlobal='false'>
+                                                    <Identifier start='1435' end='1441' name='Trait1'/>
+                                                </NamespaceName>
+                                            </AttributeName>
+                                            <AttributeParameters>
+                                                <Scalar start='1442' end='1443' type='INT' value='3'/>
+                                            </AttributeParameters>
+                                        </AttributeDeclaration>
+                                    </AttributeDeclarations>
+                                </Attribute>
+                            </Attributes>
+                            <FieldsDeclaration start='1450' end='1470' modifier='public'>
+                                <FieldType>
+                                </FieldType>
+                                <VariableNames>
+                                    <Variable start='1457' end='1469' isDollared='true'>
+                                        <Identifier start='1458' end='1469' name='staticField'/>
+                                    </Variable>
+                                </VariableNames>
+                                <InitialValues>
+                                </InitialValues>
+                            </FieldsDeclaration>
+                        </AttributedStatement>
+                        <AttributedStatement start='1476' end='1540'>
+                            <Attributes>
+                                <Attribute start='1476' end='1488'>
+                                    <AttributeDeclarations>
+                                        <AttributeDeclaration start='1478' end='1487'>
+                                            <AttributeName>
+                                                <NamespaceName start='1478' end='1484' isCurrent='false' isGlobal='false'>
+                                                    <Identifier start='1478' end='1484' name='Trait1'/>
+                                                </NamespaceName>
+                                            </AttributeName>
+                                            <AttributeParameters>
+                                                <Scalar start='1485' end='1486' type='INT' value='4'/>
+                                            </AttributeParameters>
+                                        </AttributeDeclaration>
+                                    </AttributeDeclarations>
+                                </Attribute>
+                            </Attributes>
+                            <MethodDeclaration start='1493' end='1540' modifiers='public'>
+                                <FunctionDeclaration start='1500' end='1540' isReference='false'>
+                                    <Identifier start='1509' end='1515' name='method'/>
+                                    <FormalParameters>
+                                        <FormalParameter start='1516' end='1536' isMandatory='true' isVariadic='false'>
+                                            <Attributes>
+                                                <Attribute start='1516' end='1528'>
+                                                    <AttributeDeclarations>
+                                                        <AttributeDeclaration start='1518' end='1527'>
+                                                            <AttributeName>
+                                                                <NamespaceName start='1518' end='1524' isCurrent='false' isGlobal='false'>
+                                                                    <Identifier start='1518' end='1524' name='Trait1'/>
+                                                                </NamespaceName>
+                                                            </AttributeName>
+                                                            <AttributeParameters>
+                                                                <Scalar start='1525' end='1526' type='INT' value='5'/>
+                                                            </AttributeParameters>
+                                                        </AttributeDeclaration>
+                                                    </AttributeDeclarations>
+                                                </Attribute>
+                                            </Attributes>
+                                            <ParametrType>
+                                            </ParametrType>
+                                            <ParametrName>
+                                                <Variable start='1529' end='1536' isDollared='true'>
+                                                    <Identifier start='1530' end='1536' name='param1'/>
+                                                </Variable>
+                                            </ParametrName>
+                                            <DefaultValue>
+                                            </DefaultValue>
+                                        </FormalParameter>
+                                    </FormalParameters>
+                                    <Block start='1538' end='1540' isCurly='true'>
+                                    </Block>
+                                </FunctionDeclaration>
+                            </MethodDeclaration>
+                        </AttributedStatement>
+                        <AttributedStatement start='1546' end='1685'>
+                            <Attributes>
+                                <Attribute start='1546' end='1558'>
+                                    <AttributeDeclarations>
+                                        <AttributeDeclaration start='1548' end='1557'>
+                                            <AttributeName>
+                                                <NamespaceName start='1548' end='1554' isCurrent='false' isGlobal='false'>
+                                                    <Identifier start='1548' end='1554' name='Trait1'/>
+                                                </NamespaceName>
+                                            </AttributeName>
+                                            <AttributeParameters>
+                                                <Scalar start='1555' end='1556' type='INT' value='6'/>
+                                            </AttributeParameters>
+                                        </AttributeDeclaration>
+                                    </AttributeDeclarations>
+                                </Attribute>
+                                <Attribute start='1563' end='1575'>
+                                    <AttributeDeclarations>
+                                        <AttributeDeclaration start='1565' end='1574'>
+                                            <AttributeName>
+                                                <NamespaceName start='1565' end='1571' isCurrent='false' isGlobal='false'>
+                                                    <Identifier start='1565' end='1571' name='Trait2'/>
+                                                </NamespaceName>
+                                            </AttributeName>
+                                            <AttributeParameters>
+                                                <Scalar start='1572' end='1573' type='INT' value='6'/>
+                                            </AttributeParameters>
+                                        </AttributeDeclaration>
+                                    </AttributeDeclarations>
+                                </Attribute>
+                            </Attributes>
+                            <MethodDeclaration start='1580' end='1685' modifiers='public static'>
+                                <FunctionDeclaration start='1594' end='1685' isReference='false'>
+                                    <Identifier start='1603' end='1615' name='staticMethod'/>
+                                    <FormalParameters>
+                                        <FormalParameter start='1616' end='1644' isMandatory='true' isVariadic='false'>
+                                            <Attributes>
+                                                <Attribute start='1616' end='1625'>
+                                                    <AttributeDeclarations>
+                                                        <AttributeDeclaration start='1618' end='1624'>
+                                                            <AttributeName>
+                                                                <NamespaceName start='1618' end='1624' isCurrent='false' isGlobal='false'>
+                                                                    <Identifier start='1618' end='1624' name='Trait1'/>
+                                                                </NamespaceName>
+                                                            </AttributeName>
+                                                        </AttributeDeclaration>
+                                                    </AttributeDeclarations>
+                                                </Attribute>
+                                            </Attributes>
+                                            <ParametrType>
+                                                <UnionType start='1626' end='1636'>
+                                                    <NamespaceName start='1626' end='1629' isCurrent='false' isGlobal='false'>
+                                                        <Identifier start='1626' end='1629' name='int'/>
+                                                    </NamespaceName>
+                                                    <NamespaceName start='1630' end='1636' isCurrent='false' isGlobal='false'>
+                                                        <Identifier start='1630' end='1636' name='string'/>
+                                                    </NamespaceName>
+                                                </UnionType>
+                                            </ParametrType>
+                                            <ParametrName>
+                                                <Variable start='1637' end='1644' isDollared='true'>
+                                                    <Identifier start='1638' end='1644' name='param1'/>
+                                                </Variable>
+                                            </ParametrName>
+                                            <DefaultValue>
+                                            </DefaultValue>
+                                        </FormalParameter>
+                                    </FormalParameters>
+                                    <UnionType start='1647' end='1655'>
+                                        <NamespaceName start='1647' end='1651' isCurrent='false' isGlobal='false'>
+                                            <Identifier start='1647' end='1651' name='bool'/>
+                                        </NamespaceName>
+                                        <NamespaceName start='1652' end='1655' isCurrent='false' isGlobal='false'>
+                                            <Identifier start='1652' end='1655' name='int'/>
+                                        </NamespaceName>
+                                    </UnionType>
+                                    <Block start='1656' end='1685' isCurly='true'>
+                                        <ReturnStatement start='1666' end='1679'>
+                                            <Scalar start='1673' end='1678' type='STRING' value='false'/>
+                                        </ReturnStatement>
+                                    </Block>
+                                </FunctionDeclaration>
+                            </MethodDeclaration>
+                        </AttributedStatement>
+                    </Block>
+                </TraitDeclaration>
+            </AttributedStatement>
+            <ExpressionStatement start='1689' end='1725'>
+                <Assignment start='1689' end='1724' operator='EQUAL'>
+                    <Variable start='1689' end='1694' isDollared='true'>
+                        <Identifier start='1690' end='1694' name='anon'/>
+                    </Variable>
+                    <ClassInstanceCreation start='1697' end='1724' anonymous='true'>
+                        <Parameters>
+                        </Parameters>
+                        <Superclass>
+                        </Superclass>
+                        <Interfaces>
+                        </Interfaces>
+                        <Block start='1722' end='1724' isCurly='true'>
+                        </Block>
+                    </ClassInstanceCreation>
+                </Assignment>
+            </ExpressionStatement>
+            <ExpressionStatement start='1727' end='2238'>
+                <Assignment start='1727' end='2237' operator='EQUAL'>
+                    <Variable start='1727' end='1733' isDollared='true'>
+                        <Identifier start='1728' end='1733' name='anon2'/>
+                    </Variable>
+                    <ClassInstanceCreation start='1736' end='2237' anonymous='true'>
+                        <Parameters>
+                            <Variable start='1759' end='1764' isDollared='true'>
+                                <Identifier start='1760' end='1764' name='test'/>
+                            </Variable>
+                        </Parameters>
+                        <Superclass>
+                        </Superclass>
+                        <Interfaces>
+                        </Interfaces>
+                        <Block start='1766' end='2237' isCurly='true'>
+                            <AttributedStatement start='1772' end='1823'>
+                                <Attributes>
+                                    <Attribute start='1772' end='1783'>
+                                        <AttributeDeclarations>
+                                            <AttributeDeclaration start='1774' end='1782'>
+                                                <AttributeName>
+                                                    <NamespaceName start='1774' end='1779' isCurrent='false' isGlobal='false'>
+                                                        <Identifier start='1774' end='1779' name='Anon2'/>
+                                                    </NamespaceName>
+                                                </AttributeName>
+                                                <AttributeParameters>
+                                                    <Scalar start='1780' end='1781' type='INT' value='2'/>
+                                                </AttributeParameters>
+                                            </AttributeDeclaration>
+                                        </AttributeDeclarations>
+                                    </Attribute>
+                                </Attributes>
+                                <ClassConstantDeclaration start='1788' end='1823' modifier='public'>
+                                    <Names>
+                                        <Identifier start='1801' end='1809' name='CONSTANT'/>
+                                    </Names>
+                                    <Initializers>
+                                        <Scalar start='1812' end='1822' type='STRING' value='&apos;constant&apos;'/>
+                                    </Initializers>
+                                </ClassConstantDeclaration>
+                            </AttributedStatement>
+                            <AttributedStatement start='1829' end='1875'>
+                                <Attributes>
+                                    <Attribute start='1829' end='1840'>
+                                        <AttributeDeclarations>
+                                            <AttributeDeclaration start='1831' end='1839'>
+                                                <AttributeName>
+                                                    <NamespaceName start='1831' end='1836' isCurrent='false' isGlobal='false'>
+                                                        <Identifier start='1831' end='1836' name='Anon2'/>
+                                                    </NamespaceName>
+                                                </AttributeName>
+                                                <AttributeParameters>
+                                                    <Scalar start='1837' end='1838' type='INT' value='3'/>
+                                                </AttributeParameters>
+                                            </AttributeDeclaration>
+                                        </AttributeDeclarations>
+                                    </Attribute>
+                                </Attributes>
+                                <FieldsDeclaration start='1845' end='1875' modifier='public'>
+                                    <FieldType>
+                                        <NamespaceName start='1852' end='1858' isCurrent='false' isGlobal='false'>
+                                            <Identifier start='1852' end='1858' name='string'/>
+                                        </NamespaceName>
+                                    </FieldType>
+                                    <VariableNames>
+                                        <Variable start='1859' end='1865' isDollared='true'>
+                                            <Identifier start='1860' end='1865' name='field'/>
+                                        </Variable>
+                                    </VariableNames>
+                                    <InitialValues>
+                                        <Scalar start='1868' end='1874' type='STRING' value='&apos;test&apos;'/>
+                                    </InitialValues>
+                                </FieldsDeclaration>
+                            </AttributedStatement>
+                            <AttributedStatement start='1881' end='1932'>
+                                <Attributes>
+                                    <Attribute start='1881' end='1892'>
+                                        <AttributeDeclarations>
+                                            <AttributeDeclaration start='1883' end='1891'>
+                                                <AttributeName>
+                                                    <NamespaceName start='1883' end='1888' isCurrent='false' isGlobal='false'>
+                                                        <Identifier start='1883' end='1888' name='Anon2'/>
+                                                    </NamespaceName>
+                                                </AttributeName>
+                                                <AttributeParameters>
+                                                    <Scalar start='1889' end='1890' type='INT' value='4'/>
+                                                </AttributeParameters>
+                                            </AttributeDeclaration>
+                                        </AttributeDeclarations>
+                                    </Attribute>
+                                </Attributes>
+                                <FieldsDeclaration start='1897' end='1932' modifier='public static'>
+                                    <FieldType>
+                                        <NamespaceName start='1911' end='1914' isCurrent='false' isGlobal='false'>
+                                            <Identifier start='1911' end='1914' name='int'/>
+                                        </NamespaceName>
+                                    </FieldType>
+                                    <VariableNames>
+                                        <Variable start='1915' end='1927' isDollared='true'>
+                                            <Identifier start='1916' end='1927' name='staticField'/>
+                                        </Variable>
+                                    </VariableNames>
+                                    <InitialValues>
+                                        <Scalar start='1930' end='1931' type='INT' value='1'/>
+                                    </InitialValues>
+                                </FieldsDeclaration>
+                            </AttributedStatement>
+                            <AttributedStatement start='1938' end='2010'>
+                                <Attributes>
+                                    <Attribute start='1938' end='1949'>
+                                        <AttributeDeclarations>
+                                            <AttributeDeclaration start='1940' end='1948'>
+                                                <AttributeName>
+                                                    <NamespaceName start='1940' end='1945' isCurrent='false' isGlobal='false'>
+                                                        <Identifier start='1940' end='1945' name='Anon2'/>
+                                                    </NamespaceName>
+                                                </AttributeName>
+                                                <AttributeParameters>
+                                                    <Scalar start='1946' end='1947' type='INT' value='5'/>
+                                                </AttributeParameters>
+                                            </AttributeDeclaration>
+                                        </AttributeDeclarations>
+                                    </Attribute>
+                                </Attributes>
+                                <MethodDeclaration start='1954' end='2010' modifiers='public'>
+                                    <FunctionDeclaration start='1961' end='2010' isReference='false'>
+                                        <Identifier start='1970' end='1981' name='__construct'/>
+                                        <FormalParameters>
+                                            <FormalParameter start='1982' end='2001' isMandatory='true' isVariadic='false'>
+                                                <Attributes>
+                                                    <Attribute start='1982' end='1993'>
+                                                        <AttributeDeclarations>
+                                                            <AttributeDeclaration start='1984' end='1992'>
+                                                                <AttributeName>
+                                                                    <NamespaceName start='1984' end='1989' isCurrent='false' isGlobal='false'>
+                                                                        <Identifier start='1984' end='1989' name='Anon2'/>
+                                                                    </NamespaceName>
+                                                                </AttributeName>
+                                                                <AttributeParameters>
+                                                                    <Scalar start='1990' end='1991' type='INT' value='6'/>
+                                                                </AttributeParameters>
+                                                            </AttributeDeclaration>
+                                                        </AttributeDeclarations>
+                                                    </Attribute>
+                                                </Attributes>
+                                                <ParametrType>
+                                                </ParametrType>
+                                                <ParametrName>
+                                                    <Variable start='1994' end='2001' isDollared='true'>
+                                                        <Identifier start='1995' end='2001' name='param1'/>
+                                                    </Variable>
+                                                </ParametrName>
+                                                <DefaultValue>
+                                                </DefaultValue>
+                                            </FormalParameter>
+                                        </FormalParameters>
+                                        <Block start='2003' end='2010' isCurly='true'>
+                                        </Block>
+                                    </FunctionDeclaration>
+                                </MethodDeclaration>
+                            </AttributedStatement>
+                            <AttributedStatement start='2016' end='2113'>
+                                <Attributes>
+                                    <Attribute start='2016' end='2027'>
+                                        <AttributeDeclarations>
+                                            <AttributeDeclaration start='2018' end='2026'>
+                                                <AttributeName>
+                                                    <NamespaceName start='2018' end='2023' isCurrent='false' isGlobal='false'>
+                                                        <Identifier start='2018' end='2023' name='Anon2'/>
+                                                    </NamespaceName>
+                                                </AttributeName>
+                                                <AttributeParameters>
+                                                    <Scalar start='2024' end='2025' type='INT' value='7'/>
+                                                </AttributeParameters>
+                                            </AttributeDeclaration>
+                                        </AttributeDeclarations>
+                                    </Attribute>
+                                </Attributes>
+                                <MethodDeclaration start='2032' end='2113' modifiers='public'>
+                                    <FunctionDeclaration start='2039' end='2113' isReference='false'>
+                                        <Identifier start='2048' end='2054' name='method'/>
+                                        <FormalParameters>
+                                            <FormalParameter start='2055' end='2074' isMandatory='true' isVariadic='false'>
+                                                <Attributes>
+                                                    <Attribute start='2055' end='2066'>
+                                                        <AttributeDeclarations>
+                                                            <AttributeDeclaration start='2057' end='2065'>
+                                                                <AttributeName>
+                                                                    <NamespaceName start='2057' end='2062' isCurrent='false' isGlobal='false'>
+                                                                        <Identifier start='2057' end='2062' name='Anon2'/>
+                                                                    </NamespaceName>
+                                                                </AttributeName>
+                                                                <AttributeParameters>
+                                                                    <Scalar start='2063' end='2064' type='INT' value='8'/>
+                                                                </AttributeParameters>
+                                                            </AttributeDeclaration>
+                                                        </AttributeDeclarations>
+                                                    </Attribute>
+                                                </Attributes>
+                                                <ParametrType>
+                                                </ParametrType>
+                                                <ParametrName>
+                                                    <Variable start='2067' end='2074' isDollared='true'>
+                                                        <Identifier start='2068' end='2074' name='param1'/>
+                                                    </Variable>
+                                                </ParametrName>
+                                                <DefaultValue>
+                                                </DefaultValue>
+                                            </FormalParameter>
+                                        </FormalParameters>
+                                        <UnionType start='2077' end='2087'>
+                                            <NamespaceName start='2077' end='2080' isCurrent='false' isGlobal='false'>
+                                                <Identifier start='2077' end='2080' name='int'/>
+                                            </NamespaceName>
+                                            <NamespaceName start='2081' end='2087' isCurrent='false' isGlobal='false'>
+                                                <Identifier start='2081' end='2087' name='string'/>
+                                            </NamespaceName>
+                                        </UnionType>
+                                        <Block start='2088' end='2113' isCurly='true'>
+                                            <ReturnStatement start='2098' end='2107'>
+                                                <Scalar start='2105' end='2106' type='INT' value='1'/>
+                                            </ReturnStatement>
+                                        </Block>
+                                    </FunctionDeclaration>
+                                </MethodDeclaration>
+                            </AttributedStatement>
+                            <AttributedStatement start='2119' end='2235'>
+                                <Attributes>
+                                    <Attribute start='2119' end='2127'>
+                                        <AttributeDeclarations>
+                                            <AttributeDeclaration start='2121' end='2126'>
+                                                <AttributeName>
+                                                    <NamespaceName start='2121' end='2126' isCurrent='false' isGlobal='false'>
+                                                        <Identifier start='2121' end='2126' name='Anon2'/>
+                                                    </NamespaceName>
+                                                </AttributeName>
+                                            </AttributeDeclaration>
+                                        </AttributeDeclarations>
+                                    </Attribute>
+                                </Attributes>
+                                <MethodDeclaration start='2132' end='2235' modifiers='private static'>
+                                    <FunctionDeclaration start='2147' end='2235' isReference='false'>
+                                        <Identifier start='2156' end='2168' name='staticMethod'/>
+                                        <FormalParameters>
+                                            <FormalParameter start='2169' end='2196' isMandatory='true' isVariadic='false'>
+                                                <Attributes>
+                                                    <Attribute start='2169' end='2180'>
+                                                        <AttributeDeclarations>
+                                                            <AttributeDeclaration start='2171' end='2179'>
+                                                                <AttributeName>
+                                                                    <NamespaceName start='2171' end='2176' isCurrent='false' isGlobal='false'>
+                                                                        <Identifier start='2171' end='2176' name='Anon2'/>
+                                                                    </NamespaceName>
+                                                                </AttributeName>
+                                                                <AttributeParameters>
+                                                                    <Scalar start='2177' end='2178' type='INT' value='9'/>
+                                                                </AttributeParameters>
+                                                            </AttributeDeclaration>
+                                                        </AttributeDeclarations>
+                                                    </Attribute>
+                                                </Attributes>
+                                                <ParametrType>
+                                                    <UnionType start='2181' end='2189'>
+                                                        <NamespaceName start='2181' end='2184' isCurrent='false' isGlobal='false'>
+                                                            <Identifier start='2181' end='2184' name='int'/>
+                                                        </NamespaceName>
+                                                        <NamespaceName start='2185' end='2189' isCurrent='false' isGlobal='false'>
+                                                            <Identifier start='2185' end='2189' name='bool'/>
+                                                        </NamespaceName>
+                                                    </UnionType>
+                                                </ParametrType>
+                                                <ParametrName>
+                                                    <Variable start='2190' end='2196' isDollared='true'>
+                                                        <Identifier start='2191' end='2196' name='pram1'/>
+                                                    </Variable>
+                                                </ParametrName>
+                                                <DefaultValue>
+                                                </DefaultValue>
+                                            </FormalParameter>
+                                        </FormalParameters>
+                                        <UnionType start='2199' end='2209'>
+                                            <NamespaceName start='2199' end='2202' isCurrent='false' isGlobal='false'>
+                                                <Identifier start='2199' end='2202' name='int'/>
+                                            </NamespaceName>
+                                            <NamespaceName start='2203' end='2209' isCurrent='false' isGlobal='false'>
+                                                <Identifier start='2203' end='2209' name='string'/>
+                                            </NamespaceName>
+                                        </UnionType>
+                                        <Block start='2210' end='2235' isCurly='true'>
+                                            <ReturnStatement start='2220' end='2229'>
+                                                <Scalar start='2227' end='2228' type='INT' value='1'/>
+                                            </ReturnStatement>
+                                        </Block>
+                                    </FunctionDeclaration>
+                                </MethodDeclaration>
+                            </AttributedStatement>
+                        </Block>
+                    </ClassInstanceCreation>
+                </Assignment>
+            </ExpressionStatement>
+            <AttributedStatement start='2240' end='2271'>
+                <Attributes>
+                    <Attribute start='2240' end='2251'>
+                        <AttributeDeclarations>
+                            <AttributeDeclaration start='2242' end='2250'>
+                                <AttributeName>
+                                    <NamespaceName start='2242' end='2247' isCurrent='false' isGlobal='false'>
+                                        <Identifier start='2242' end='2247' name='Func1'/>
+                                    </NamespaceName>
+                                </AttributeName>
+                                <AttributeParameters>
+                                    <Scalar start='2248' end='2249' type='INT' value='1'/>
+                                </AttributeParameters>
+                            </AttributeDeclaration>
+                        </AttributeDeclarations>
+                    </Attribute>
+                </Attributes>
+                <FunctionDeclaration start='2252' end='2271' isReference='false'>
+                    <Identifier start='2261' end='2266' name='func1'/>
+                    <FormalParameters>
+                    </FormalParameters>
+                    <Block start='2269' end='2271' isCurly='true'>
+                    </Block>
+                </FunctionDeclaration>
+            </AttributedStatement>
+            <AttributedStatement start='2273' end='2339'>
+                <Attributes>
+                    <Attribute start='2273' end='2284'>
+                        <AttributeDeclarations>
+                            <AttributeDeclaration start='2275' end='2283'>
+                                <AttributeName>
+                                    <NamespaceName start='2275' end='2280' isCurrent='false' isGlobal='false'>
+                                        <Identifier start='2275' end='2280' name='Func2'/>
+                                    </NamespaceName>
+                                </AttributeName>
+                                <AttributeParameters>
+                                    <Scalar start='2281' end='2282' type='INT' value='1'/>
+                                </AttributeParameters>
+                            </AttributeDeclaration>
+                        </AttributeDeclarations>
+                    </Attribute>
+                </Attributes>
+                <FunctionDeclaration start='2285' end='2339' isReference='false'>
+                    <Identifier start='2294' end='2299' name='func2'/>
+                    <FormalParameters>
+                        <FormalParameter start='2300' end='2329' isMandatory='true' isVariadic='false'>
+                            <Attributes>
+                                <Attribute start='2300' end='2311'>
+                                    <AttributeDeclarations>
+                                        <AttributeDeclaration start='2302' end='2310'>
+                                            <AttributeName>
+                                                <NamespaceName start='2302' end='2307' isCurrent='false' isGlobal='false'>
+                                                    <Identifier start='2302' end='2307' name='Func2'/>
+                                                </NamespaceName>
+                                            </AttributeName>
+                                            <AttributeParameters>
+                                                <Scalar start='2308' end='2309' type='INT' value='2'/>
+                                            </AttributeParameters>
+                                        </AttributeDeclaration>
+                                    </AttributeDeclarations>
+                                </Attribute>
+                            </Attributes>
+                            <ParametrType>
+                                <UnionType start='2312' end='2322'>
+                                    <NamespaceName start='2312' end='2315' isCurrent='false' isGlobal='false'>
+                                        <Identifier start='2312' end='2315' name='int'/>
+                                    </NamespaceName>
+                                    <NamespaceName start='2316' end='2322' isCurrent='false' isGlobal='false'>
+                                        <Identifier start='2316' end='2322' name='string'/>
+                                    </NamespaceName>
+                                </UnionType>
+                            </ParametrType>
+                            <ParametrName>
+                                <Variable start='2323' end='2329' isDollared='true'>
+                                    <Identifier start='2324' end='2329' name='param'/>
+                                </Variable>
+                            </ParametrName>
+                            <DefaultValue>
+                            </DefaultValue>
+                        </FormalParameter>
+                    </FormalParameters>
+                    <NamespaceName start='2332' end='2336' isCurrent='false' isGlobal='false'>
+                        <Identifier start='2332' end='2336' name='void'/>
+                    </NamespaceName>
+                    <Block start='2337' end='2339' isCurly='true'>
+                    </Block>
+                </FunctionDeclaration>
+            </AttributedStatement>
+            <ExpressionStatement start='2341' end='2380'>
+                <Assignment start='2341' end='2379' operator='EQUAL'>
+                    <Variable start='2341' end='2349' isDollared='true'>
+                        <Identifier start='2342' end='2349' name='labmda1'/>
+                    </Variable>
+                    <AttributedExpression start='2352' end='2379'>
+                        <Attributes>
+                            <Attribute start='2352' end='2365'>
+                                <AttributeDeclarations>
+                                    <AttributeDeclaration start='2354' end='2364'>
+                                        <AttributeName>
+                                            <NamespaceName start='2354' end='2361' isCurrent='false' isGlobal='false'>
+                                                <Identifier start='2354' end='2361' name='Lambda1'/>
+                                            </NamespaceName>
+                                        </AttributeName>
+                                        <AttributeParameters>
+                                            <Scalar start='2362' end='2363' type='INT' value='1'/>
+                                        </AttributeParameters>
+                                    </AttributeDeclaration>
+                                </AttributeDeclarations>
+                            </Attribute>
+                        </Attributes>
+                        <LambdaFunctionDeclaration start='2366' end='2379' isReference='false'>
+                            <Block start='2377' end='2379' isCurly='true'>
+                            </Block>
+                        </LambdaFunctionDeclaration>
+                    </AttributedExpression>
+                </Assignment>
+            </ExpressionStatement>
+            <ExpressionStatement start='2381' end='2439'>
+                <Assignment start='2381' end='2438' operator='EQUAL'>
+                    <Variable start='2381' end='2389' isDollared='true'>
+                        <Identifier start='2382' end='2389' name='labmda2'/>
+                    </Variable>
+                    <AttributedExpression start='2392' end='2438'>
+                        <Attributes>
+                            <Attribute start='2392' end='2405'>
+                                <AttributeDeclarations>
+                                    <AttributeDeclaration start='2394' end='2404'>
+                                        <AttributeName>
+                                            <NamespaceName start='2394' end='2401' isCurrent='false' isGlobal='false'>
+                                                <Identifier start='2394' end='2401' name='Lambda2'/>
+                                            </NamespaceName>
+                                        </AttributeName>
+                                        <AttributeParameters>
+                                            <Scalar start='2402' end='2403' type='INT' value='1'/>
+                                        </AttributeParameters>
+                                    </AttributeDeclaration>
+                                </AttributeDeclarations>
+                            </Attribute>
+                            <Attribute start='2406' end='2418'>
+                                <AttributeDeclarations>
+                                    <AttributeDeclaration start='2408' end='2417'>
+                                        <AttributeName>
+                                            <NamespaceName start='2408' end='2415' isCurrent='false' isGlobal='false'>
+                                                <Identifier start='2408' end='2415' name='Lambda3'/>
+                                            </NamespaceName>
+                                        </AttributeName>
+                                        <AttributeParameters>
+                                        </AttributeParameters>
+                                    </AttributeDeclaration>
+                                </AttributeDeclarations>
+                            </Attribute>
+                        </Attributes>
+                        <LambdaFunctionDeclaration start='2419' end='2438' isReference='false'>
+                            <NamespaceName start='2431' end='2435' isCurrent='false' isGlobal='false'>
+                                <Identifier start='2431' end='2435' name='void'/>
+                            </NamespaceName>
+                            <Block start='2436' end='2438' isCurly='true'>
+                            </Block>
+                        </LambdaFunctionDeclaration>
+                    </AttributedExpression>
+                </Assignment>
+            </ExpressionStatement>
+            <ExpressionStatement start='2441' end='2476'>
+                <Assignment start='2441' end='2475' operator='EQUAL'>
+                    <Variable start='2441' end='2448' isDollared='true'>
+                        <Identifier start='2442' end='2448' name='arrow1'/>
+                    </Variable>
+                    <AttributedExpression start='2451' end='2475'>
+                        <Attributes>
+                            <Attribute start='2451' end='2463'>
+                                <AttributeDeclarations>
+                                    <AttributeDeclaration start='2453' end='2462'>
+                                        <AttributeName>
+                                            <NamespaceName start='2453' end='2459' isCurrent='false' isGlobal='false'>
+                                                <Identifier start='2453' end='2459' name='Arrow1'/>
+                                            </NamespaceName>
+                                        </AttributeName>
+                                        <AttributeParameters>
+                                            <Scalar start='2460' end='2461' type='INT' value='1'/>
+                                        </AttributeParameters>
+                                    </AttributeDeclaration>
+                                </AttributeDeclarations>
+                            </Attribute>
+                        </Attributes>
+                        <ArrowFunctionDeclaration start='2464' end='2475' isReference='false' isStatic='false'>
+                            <Scalar start='2472' end='2475' type='INT' value='100'/>
+                        </ArrowFunctionDeclaration>
+                    </AttributedExpression>
+                </Assignment>
+            </ExpressionStatement>
+            <ExpressionStatement start='2477' end='2543'>
+                <Assignment start='2477' end='2542' operator='EQUAL'>
+                    <Variable start='2477' end='2484' isDollared='true'>
+                        <Identifier start='2478' end='2484' name='arrow2'/>
+                    </Variable>
+                    <AttributedExpression start='2487' end='2542'>
+                        <Attributes>
+                            <Attribute start='2487' end='2518'>
+                                <AttributeDeclarations>
+                                    <AttributeDeclaration start='2489' end='2498'>
+                                        <AttributeName>
+                                            <NamespaceName start='2489' end='2495' isCurrent='false' isGlobal='false'>
+                                                <Identifier start='2489' end='2495' name='Arrow2'/>
+                                            </NamespaceName>
+                                        </AttributeName>
+                                        <AttributeParameters>
+                                            <Scalar start='2496' end='2497' type='INT' value='1'/>
+                                        </AttributeParameters>
+                                    </AttributeDeclaration>
+                                    <AttributeDeclaration start='2500' end='2517'>
+                                        <AttributeName>
+                                            <NamespaceName start='2500' end='2506' isCurrent='false' isGlobal='false'>
+                                                <Identifier start='2500' end='2506' name='Arrow2'/>
+                                            </NamespaceName>
+                                        </AttributeName>
+                                        <AttributeParameters>
+                                            <Scalar start='2507' end='2508' type='INT' value='2'/>
+                                            <Scalar start='2510' end='2516' type='STRING' value='"test"'/>
+                                        </AttributeParameters>
+                                    </AttributeDeclaration>
+                                </AttributeDeclarations>
+                            </Attribute>
+                        </Attributes>
+                        <ArrowFunctionDeclaration start='2519' end='2542' isReference='false' isStatic='false'>
+                            <UnionType start='2525' end='2535'>
+                                <NamespaceName start='2525' end='2528' isCurrent='false' isGlobal='false'>
+                                    <Identifier start='2525' end='2528' name='int'/>
+                                </NamespaceName>
+                                <NamespaceName start='2529' end='2535' isCurrent='false' isGlobal='false'>
+                                    <Identifier start='2529' end='2535' name='string'/>
+                                </NamespaceName>
+                            </UnionType>
+                            <Scalar start='2539' end='2542' type='INT' value='100'/>
+                        </ArrowFunctionDeclaration>
+                    </AttributedExpression>
+                </Assignment>
+            </ExpressionStatement>
+        </Statements>
+    </Program>
+</testresult>
