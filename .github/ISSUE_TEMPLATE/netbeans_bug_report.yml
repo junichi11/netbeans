@@ -50,10 +50,27 @@ body:
       description: >
         What should we do to reproduce the problem? If you are not able to provide a reproducible case,
         please open a [Discussion](https://github.com/apache/netbeans/discussions) instead.
+      placeholder: |
+        Please make sure you provide a reproducible step-by-step case of how to reproduce the problem as minimally and precisely as possible.
+        Remember that non-reproducible issues may be closed or converted into discussions. If we cannot reproduce an issue we cannot fix it!
+        e.g.
+        1. Create a new file (Example.java)
+        2. Something...
+        3. Doesn't work code completion correctly
+  - type: textarea
+    attributes:
+      label: Example code to reproduce it
+      description: >
+        Please write an **example** code to reproduce it. Or please attach an **example** project as a zip file.
+        Note: Please DO NOT write/attach the unpublic code of an actual product.
       placeholder: >
-        Please make sure you provide a reproducible step-by-step case of how to reproduce the problem
-        as minimally and precisely as possible. Remember that non-reproducible issues may be closed or
-        converted into discussions. If we cannot reproduce an issue we cannot fix it!
+        ```java
+
+        class Example {
+            public void example() {
+            }
+        }
+        ```
   - type: dropdown
     attributes:
       label: Did this work correctly in an earlier version?
