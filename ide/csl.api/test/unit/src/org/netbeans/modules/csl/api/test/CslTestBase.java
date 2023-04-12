@@ -3161,6 +3161,7 @@ public abstract class CslTestBase extends NbTestCase {
                 }
                 assertNotNull(match);
                 assertNotNull(match.getElement());
+                System.out.println("DocTest: " + match.getName() + "(" + getName() + ")");
 
                 // Get documentation
                 String documentation;

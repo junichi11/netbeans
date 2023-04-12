@@ -384,6 +384,8 @@ public class PHPCCDocumentationTest extends PHPCodeCompletionTestBase {
             } catch (AssertionError ex) {
                 // there is no completion item
                 return;
+            } catch (Exception ex) {
+                System.out.println(ex.getMessage());
             }
             fail("Must not have documentation");
         }
