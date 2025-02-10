@@ -18,11 +18,6 @@
  */
 package org.netbeans.modules.php.editor.model.impl;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -57,21 +52,21 @@ public class PropertyHookSignatureItem {
     private static final Logger LOGGER = Logger.getLogger(PropertyHookSignatureItem.class.getName());
     private static final String EMPTY_ARRAY = "[]"; // NOI18N
 
-    @JsonProperty("name")
+//    @JsonProperty("name")
     private String name;
-    @JsonProperty("start")
+//    @JsonProperty("start")
     private int start;
-    @JsonProperty("end")
+//    @JsonProperty("end")
     private int end;
-    @JsonProperty("mod")
+//    @JsonProperty("mod")
     private int mod;
-    @JsonProperty("isRef")
+//    @JsonProperty("isRef")
     private boolean isRef;
-    @JsonProperty("isAttr")
+//    @JsonProperty("isAttr")
     private boolean isAttr;
-    @JsonProperty("hasBody")
+//    @JsonProperty("hasBody")
     private boolean hasBody;
-    @JsonProperty("paramSig")
+//    @JsonProperty("paramSig")
     private String paramSig;
 
     // need a default constructor for jackson
@@ -142,15 +137,15 @@ public class PropertyHookSignatureItem {
         List<PropertyHookSignatureItem> signatureItems = getSignatureItemsFromScopes(propertyHookScopes);
         String signature = EMPTY_ARRAY;
         if (!signatureItems.isEmpty()) {
-            try {
-                ObjectMapper mapper = new ObjectMapper();
-                signature = mapper.writeValueAsString(signatureItems);
-            } catch (JsonProcessingException ex) {
-                LOGGER.log(Level.WARNING, "Cannot serialize: {0}, {1}", new Object[]{signatureItems, ex.getMessage()}); // NOI18N
-            }
-            if (LOGGER.isLoggable(Level.FINE)) {
-                LOGGER.log(Level.FINE, "getSignatureFromScopes() took: {0} ms", (System.currentTimeMillis() - start)); // NOI18N
-            }
+//            try {
+//                ObjectMapper mapper = new ObjectMapper();
+//                signature = mapper.writeValueAsString(signatureItems);
+//            } catch (JsonProcessingException ex) {
+//                LOGGER.log(Level.WARNING, "Cannot serialize: {0}, {1}", new Object[]{signatureItems, ex.getMessage()}); // NOI18N
+//            }
+//            if (LOGGER.isLoggable(Level.FINE)) {
+//                LOGGER.log(Level.FINE, "getSignatureFromScopes() took: {0} ms", (System.currentTimeMillis() - start)); // NOI18N
+//            }
         }
         return signature;
     }
@@ -180,15 +175,15 @@ public class PropertyHookSignatureItem {
         List<PropertyHookSignatureItem> signatureItems = getSignatureItemsFromElements(propertyHookElements);
         String signature = EMPTY_ARRAY;
         if (!signatureItems.isEmpty()) {
-            try {
-                ObjectMapper mapper = new ObjectMapper();
-                signature = mapper.writeValueAsString(signatureItems);
-            } catch (JsonProcessingException ex) {
-                LOGGER.log(Level.WARNING, "Cannot serialize: {0}, {1}", new Object[]{signatureItems, ex.getMessage()}); // NOI18N
-            }
-            if (LOGGER.isLoggable(Level.FINE)) {
-                LOGGER.log(Level.FINE, "getSignatureFromElements() took: {0} ms", (System.currentTimeMillis() - start)); // NOI18N
-            }
+//            try {
+//                ObjectMapper mapper = new ObjectMapper();
+//                signature = mapper.writeValueAsString(signatureItems);
+//            } catch (JsonProcessingException ex) {
+//                LOGGER.log(Level.WARNING, "Cannot serialize: {0}, {1}", new Object[]{signatureItems, ex.getMessage()}); // NOI18N
+//            }
+//            if (LOGGER.isLoggable(Level.FINE)) {
+//                LOGGER.log(Level.FINE, "getSignatureFromElements() took: {0} ms", (System.currentTimeMillis() - start)); // NOI18N
+//            }
         }
         return signature;
     }
@@ -220,61 +215,61 @@ public class PropertyHookSignatureItem {
 
         final long start = (LOGGER.isLoggable(Level.FINE)) ? System.currentTimeMillis() : 0;
         List<PropertyHookSignatureItem> signatureItems = List.of();
-        try {
-            ObjectMapper mapper = new ObjectMapper();
-            signatureItems = mapper.readValue(signature, new TypeReference<List<PropertyHookSignatureItem>>() {});
-        } catch (JsonProcessingException ex) {
-            LOGGER.log(Level.WARNING,
-                    "Cannot deserialize: {0}, {1} (please try to delete your cache directory because the signature may be changed.)", // NOI18N
-                    new Object[]{signature, ex.getMessage()});
-        }
+//        try {
+//            ObjectMapper mapper = new ObjectMapper();
+//            signatureItems = mapper.readValue(signature, new TypeReference<List<PropertyHookSignatureItem>>() {});
+//        } catch (JsonProcessingException ex) {
+//            LOGGER.log(Level.WARNING,
+//                    "Cannot deserialize: {0}, {1} (please try to delete your cache directory because the signature may be changed.)", // NOI18N
+//                    new Object[]{signature, ex.getMessage()});
+//        }
         if (LOGGER.isLoggable(Level.FINE)) {
             LOGGER.log(Level.FINE, "fromSignature() took: {0} ms", (System.currentTimeMillis() - start)); // NOI18N
         }
         return signatureItems;
     }
 
-    @JsonIgnore
+//    @JsonIgnore
     public String getName() {
         return name;
     }
 
-    @JsonIgnore
+//    @JsonIgnore
     public OffsetRange getOffsetRange() {
         return new OffsetRange(start, end);
     }
 
-    @JsonIgnore
+//    @JsonIgnore
     public int getStart() {
         return start;
     }
 
-    @JsonIgnore
+//    @JsonIgnore
     public int getEnd() {
         return end;
     }
 
-    @JsonIgnore
+//    @JsonIgnore
     public int getModifier() {
         return mod;
     }
 
-    @JsonIgnore
+//    @JsonIgnore
     public boolean isAttributed() {
         return isAttr;
     }
 
-    @JsonIgnore
+//    @JsonIgnore
     public boolean isReference() {
         return isRef;
     }
 
-    @JsonIgnore
+//    @JsonIgnore
     public boolean hasBody() {
         return hasBody;
     }
 
-    @JsonIgnore
+//    @JsonIgnore
     public String getParameterSignature() {
         return paramSig;
     }
