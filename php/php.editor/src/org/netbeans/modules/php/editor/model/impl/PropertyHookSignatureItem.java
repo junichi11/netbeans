@@ -23,12 +23,18 @@ import java.util.Collection;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONAware;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.netbeans.modules.csl.api.OffsetRange;
 import org.netbeans.modules.php.api.util.StringUtils;
 import org.netbeans.modules.php.editor.api.elements.ParameterElement;
 import org.netbeans.modules.php.editor.api.elements.PropertyHookElement;
 import org.netbeans.modules.php.editor.elements.ParameterElementImpl;
 import org.netbeans.modules.php.editor.model.PropertyHookScope;
+import org.openide.util.Exceptions;
 
 /**
  * Represents a JSON format object for a property hook.
@@ -47,7 +53,7 @@ import org.netbeans.modules.php.editor.model.PropertyHookScope;
  * }
  * </pre>
  */
-public class PropertyHookSignatureItem {
+public class PropertyHookSignatureItem implements JSONAware {
 
     private static final Logger LOGGER = Logger.getLogger(PropertyHookSignatureItem.class.getName());
     private static final String EMPTY_ARRAY = "[]"; // NOI18N
@@ -137,6 +143,9 @@ public class PropertyHookSignatureItem {
         List<PropertyHookSignatureItem> signatureItems = getSignatureItemsFromScopes(propertyHookScopes);
         String signature = EMPTY_ARRAY;
         if (!signatureItems.isEmpty()) {
+            JSONArray items = new JSONArray();
+            items.addAll(signatureItems);
+            signature = items.toJSONString();
 //            try {
 //                ObjectMapper mapper = new ObjectMapper();
 //                signature = mapper.writeValueAsString(signatureItems);
@@ -175,6 +184,9 @@ public class PropertyHookSignatureItem {
         List<PropertyHookSignatureItem> signatureItems = getSignatureItemsFromElements(propertyHookElements);
         String signature = EMPTY_ARRAY;
         if (!signatureItems.isEmpty()) {
+            JSONArray items = new JSONArray();
+            items.addAll(signatureItems);
+            signature = items.toJSONString();
 //            try {
 //                ObjectMapper mapper = new ObjectMapper();
 //                signature = mapper.writeValueAsString(signatureItems);
@@ -214,7 +226,27 @@ public class PropertyHookSignatureItem {
         }
 
         final long start = (LOGGER.isLoggable(Level.FINE)) ? System.currentTimeMillis() : 0;
-        List<PropertyHookSignatureItem> signatureItems = List.of();
+        List<PropertyHookSignatureItem> signatureItems = new ArrayList<>(2);
+        JSONParser parser = new JSONParser();
+        try {
+            JSONArray jsonArray = (JSONArray) parser.parse(signature);
+            for (Object object : jsonArray) {
+                JSONObject jsonObject = (JSONObject) object;
+                PropertyHookSignatureItem item = new PropertyHookSignatureItem(
+                        (String) jsonObject.get("name"),
+                        ((Long) jsonObject.get("start")).intValue(),
+                        ((Long) jsonObject.get("end")).intValue(),
+                        ((Long) jsonObject.get("mod")).intValue(),
+                        (Boolean) jsonObject.get("isAttr"),
+                        (Boolean) jsonObject.get("isRef"),
+                        (Boolean) jsonObject.get("hasBody"),
+                        (String) jsonObject.get("paramSig")
+                );
+                signatureItems.add(item);
+            }
+        } catch (ParseException ex) {
+            Exceptions.printStackTrace(ex);
+        }
 //        try {
 //            ObjectMapper mapper = new ObjectMapper();
 //            signatureItems = mapper.readValue(signature, new TypeReference<List<PropertyHookSignatureItem>>() {});
@@ -285,6 +317,20 @@ public class PropertyHookSignatureItem {
                 + ", isAttr=" + isAttr // NOI18N
                 + ", hasBody=" + hasBody // NOI18N
                 + ", paramSig=" + paramSig // NOI18N
+                + '}';
+    }
+
+    @Override
+    public String toJSONString() {
+        return  '{'
+                + "\"name\":" + "\"" + name + "\""// NOI18N
+                + ",\"start\":" + start // NOI18N
+                + ",\"end\":" + end // NOI18N
+                + ",\"mod\":" + mod // NOI18N
+                + ",\"isRef\":" + (isRef ? "true" : "false") // NOI18N
+                + ",\"isAttr\":" + (isAttr ? "true" : "false") // NOI18N
+                + ",\"hasBody\":" + (hasBody ? "true" : "false") // NOI18N
+                + ",\"paramSig\":" + "\"" + paramSig + "\""// NOI18N
                 + '}';
     }
 }
